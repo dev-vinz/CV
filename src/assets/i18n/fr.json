@@ -1,5 +1,63 @@
 {
-  "title": "Bonjour tout le monde !",
-  "title_2": "Bonjour tout le monde depuis les projets !",
-  "home": {}
+  "header": {
+    "navbar-home": "Mes informations",
+    "navbar-projects": "Mes projets"
+  },
+  "home": {
+    "greeting": "Bienvenue",
+    "title": "Je suis Vincent Jeannin",
+    "subtitle": "Étudiant en ingénierie logicielle à la Haute-École ARC de Neuchâtel. Basé en Suisse",
+    "about": {
+      "title": "À propos de moi",
+      "first_paragraph": "Passionné par l'informatique depuis mes 15 ans, j'ai débuté l'apprentissage du langage JavaScript en autodidacte. Par la suite, lors de mes études au lycée, j'ai choisi l'option complémentaire Informatique, et depuis ça ne m'a jamais quitté.",
+      "second_paragraph": "Suite à cela, j'ai commencé à développer des bots sur la plateforme Discord, afin de m'améliorer mais surtout pour m'amuser. Mes services ont été reconnus par certains membre de la communauté et depuis je n'ai jamais cessé d'en faire.",
+      "third_paragraph": "En dehors de l'informatique, j'aime beaucoup la musique. Je joue du piano depuis déjà 7ans, et je suis un grand passionné de moto, ainsi que du sport en général. J'ai fais 8 ans de natation en compétition, et je pratique régulièrement de l'escalade en bloc."
+    },
+    "education": {
+      "title": "Formations académique",
+      "lycee": {
+        "name": "Lycée Denis-de-Rougemont",
+        "location": "Neuchâtel, Suisse",
+        "section": "Physique et Application des Mathématiques",
+        "start_year": "2014",
+        "duration": "4 Ans"
+      },
+      "epfl_microtech": {
+        "name": "École Polytechnique Fédérale de Lausanne",
+        "location": "Lausanne, Suisse",
+        "section": "Première année de Bachelor Microtechnique",
+        "start_year": "2018",
+        "duration": "1 Année"
+      },
+      "epfl_info": {
+        "name": "École Polytechnique Fédérale de Lausanne",
+        "location": "Lausanne, Suisse",
+        "section": "Première année de Bachelor Informatique",
+        "start_year": "2019",
+        "duration": "1 Année"
+      },
+      "hearc": {
+        "name": "Haute École Arc Ingénierie",
+        "location": "Neuchâtel, Suisse",
+        "section": "Bachelor Informatique, en ingénierie logicielle",
+        "start_year": "2020",
+        "duration": "3 Ans"
+      }
+    },
+    "professional": {
+      "title": "Expériences professionnelles",
+      "uditis_2020": {
+        "name": "Uditis SA",
+        "year": "2020",
+        "intro": "Lors de la première partie de l'année 2020, et pour une durée de 5 mois d'avril à août, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
+        "description": "Je me suis occupé entre autres de créer une application desktop permettant de créer différents scénarios de test pour un de leur projet, les carnets ATA."
+      },
+      "uditis_2021": {
+        "name": "Uditis SA",
+        "year": "2021",
+        "intro": "Lors des vacances d'été de l'année 2021, pour une durée de 6 semaines, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
+        "description": "Mon travail était de reprendre le développement débuté en 2020, et de l'améliorer."
+      }
+    }
+  }
 }

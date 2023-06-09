@@ -25,7 +25,23 @@ export class LangageSelectorComponent {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  public get list(): string[] {
-    return ['en', 'fr'];
+  public get current(): Record<'flag' | 'code' | 'name', string> {
+    const lang = this.translocoService.getActiveLang();
+    return this.list.find((item) => item.code === lang)!;
+  }
+
+  public get list(): Record<'flag' | 'code' | 'name', string>[] {
+    return [
+      {
+        flag: '🇬🇧',
+        code: 'en',
+        name: 'English',
+      },
+      {
+        flag: '🇫🇷',
+        code: 'fr',
+        name: 'Français',
+      },
+    ];
   }
 }

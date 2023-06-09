@@ -1,2 +1,48 @@
-<p>home works!</p>
-<p>{{ "title" | transloco }}</p>
+<div class="container">
+  <h1 class="mt-5 fw-bolder">
+    {{ "home.greeting" | transloco }}
+    <img src="assets/images/wave.png" alt="wave" width="50px" height="50px" />
+  </h1>
+  <h2 class="fw-bolder">{{ "home.title" | transloco }}</h2>
+  <p class="h4">{{ "home.subtitle" | transloco }}</p>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <app-social-button
+      [tooltip]="'Linkedin'"
+      [url]="'https://www.linkedin.com/in/vincentjeannin/'"
+      [blank]="true"
+    >
+      <i class="fa-brands fa-linkedin-in"></i>
+    </app-social-button>
+    <app-social-button
+      [tooltip]="'GitHub'"
+      [url]="'https://www.github.com/dev-vinz'"
+      [blank]="true"
+    >
+      <i class="fa-brands fa-github"></i>
+    </app-social-button>
+    <app-social-button
+      [tooltip]="'Mail'"
+      [url]="'mailto:vincent@jeannin.ch'"
+      [blank]="false"
+    >
+      <i class="fa-solid fa-envelope"></i>
+    </app-social-button>
+    <app-social-button
+      [tooltip]="'Discord'"
+      [url]="'https://www.discord.com/users/384101754373144593'"
+      [blank]="true"
+    >
+      <i class="fa-brands fa-discord"></i>
+    </app-social-button>
+  </div>
+
+  <h2 class="mb-5 h3">{{ "home.about.title" | transloco }}</h2>
+  <app-about-me class="mb-3"></app-about-me>
+
+  <h2 class="my-5 h3">{{ "home.education.title" | transloco }}</h2>
+  <app-education-timeline class="mb-3"></app-education-timeline>
+
+  <h2 class="my-5 h3">{{ "home.professional.title" | transloco }}</h2>
+  <app-pro-experiences class="mb-3"></app-pro-experiences>
+</div>
