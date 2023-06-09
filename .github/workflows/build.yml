@@ -1,4 +1,4 @@
-name: 🚀 Deploy my CV website
+name: 🚀 Deployement into FTP server
 
 on:
   push:
@@ -20,7 +20,9 @@ jobs:
           node-version: 18.x
 
       - name: 🔨 Build Project
-        run: ng build
+        run: |
+          npm install
+          npm run build
 
       - name: 📂 Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
