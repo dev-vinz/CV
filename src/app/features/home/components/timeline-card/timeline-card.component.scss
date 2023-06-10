@@ -1,6 +1,8 @@
 .timeline {
   margin-bottom: 40px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .timeline:after {
@@ -15,7 +17,7 @@
   line-height: 18px;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -151,6 +153,10 @@
   margin-bottom: 0;
 }
 
+.timeline.odd {
+  flex-direction: row-reverse;
+}
+
 .timeline.odd .date-content {
   float: right;
 }
@@ -184,6 +190,7 @@
 
 @media only screen and (max-width: 767px) {
   .timeline {
+    display: block;
     margin-bottom: 20px;
   }
   .icon {
