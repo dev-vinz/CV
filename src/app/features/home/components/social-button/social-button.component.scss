@@ -5,8 +5,8 @@
   color: #000;
   padding: 5px 8px;
   border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 0 10px 10px var(--rgba01);
+  background-color: var(--bgColor);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -42,7 +42,7 @@
     border-left: 4px solid;
     border-right: 4px solid;
     transform: skewX(20deg);
-    color: #000;
+    color: var(--textColor);
   }
 
   &:hover::after {
@@ -50,10 +50,11 @@
     border-top: 4px solid;
     border-bottom: 4px solid;
     transform: skewY(-20deg);
-    color: #000;
+    color: var(--textColor);
   }
 
   &:hover .tooltip {
+    color: var(--textColor);
     top: -45px;
     opacity: 1;
     pointer-events: auto;
@@ -62,5 +63,5 @@
 
 .icon span {
   font-size: 2rem;
-  color: #000;
+  color: var(--textColor);
 }

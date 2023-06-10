@@ -6,12 +6,12 @@
 }
 
 .main-timeline .timeline-content {
-  color: #fff;
-  background: #fff;
+  color: #f2f2f7;
+  background: var(--bgColor);
   text-align: center;
   padding: 0 30px 40px 75px;
   border-radius: 7px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px var(--rgba01);
   display: block;
   position: relative;
   z-index: 1;

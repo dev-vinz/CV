@@ -51,8 +51,8 @@
 }
 
 .main-timeline .icon:before {
-  background: #fff;
-  border: 2px solid #232323;
+  background: var(--bgColor);
+  border: 2px solid var(--borderColor);
   left: -3px;
 }
 
@@ -112,8 +112,8 @@
 }
 
 .main-timeline .date-outer:before {
-  background: #fff;
-  border: 2px solid #232323;
+  background: var(--bgColor);
+  border: 2px solid var(--borderColor);
   left: -6px;
 }
 
@@ -147,7 +147,7 @@
   display: block;
   font-size: 30px;
   font-weight: 700;
-  color: #232323;
+  color: var(--textColor);
   line-height: 36px;
 }
 

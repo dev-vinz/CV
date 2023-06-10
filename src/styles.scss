@@ -1,11 +1,15 @@
 @mixin lighten() {
   --bgColor: #f2f2f7;
+  --bgHoverColor: #e5e5ea;
+  --rgba01: rgba(33, 33, 33, 0.1);
   --textColor: #212121;
   --borderColor: #212121;
 }
 
 @mixin darken() {
   --bgColor: #212121;
+  --bgHoverColor: #424242;
+  --rgba01: rgba(242, 242, 247, 0.1);
   --textColor: #f2f2f7;
   --borderColor: #f2f2f7;
 }

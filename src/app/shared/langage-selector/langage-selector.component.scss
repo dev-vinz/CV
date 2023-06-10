@@ -1,0 +1,16 @@
+.dropdown-menu {
+  background-color: var(--bgColor);
+  border: 0.5px solid var(--bgHoverColor);
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--textColor);
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--bgHoverColor);
+}
+
+.dropdown-menu .dropdown-item.active {
+  background-color: var(--bgHoverColor);
+}
