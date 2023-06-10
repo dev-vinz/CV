@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -13,11 +14,24 @@ export class HeaderComponent {
   private darkLogoUrl = '/assets/images/logo_dark.png';
   private lightLogoUrl = '/assets/images/logo_white.png';
 
-  public isDarkMode = false;
+  private isDarkMode: boolean = false;
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+  |*                        CONSTRUCTORS                         *|
+  \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  ngOnInit(): void {
+    const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
+    this.isDarkMode = deviceMode.matches;
+  }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  public toggleTheme(isDarkMode: boolean): void {
+    this.isDarkMode = isDarkMode;
+  }
 
   /* * * * * * * * * * * * * * * *\
   |*           GETTERS           *|

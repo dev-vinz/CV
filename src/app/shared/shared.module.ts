@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
@@ -7,8 +8,12 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 
 @NgModule({
-  declarations: [HeaderComponent, LangageSelectorComponent, ThemeSwitcherComponent],
-  imports: [CommonModule, RouterModule, TranslocoModule],
+  declarations: [
+    HeaderComponent,
+    LangageSelectorComponent,
+    ThemeSwitcherComponent,
+  ],
+  imports: [CommonModule, RouterModule, TranslocoModule, FormsModule],
   exports: [HeaderComponent],
 })
 export class SharedModule {}

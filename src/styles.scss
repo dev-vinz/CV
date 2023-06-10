@@ -1,3 +1,24 @@
+@mixin lighten() {
+  --bgColor: #f2f2f7;
+  --textColor: #212121;
+  --borderColor: #212121;
+}
+
+@mixin darken() {
+  --bgColor: #212121;
+  --textColor: #f2f2f7;
+  --borderColor: #f2f2f7;
+}
+
+body.dark {
+  @include darken();
+}
+
+body.light {
+  @include lighten();
+}
+
 body {
-  background-color: #f2f2f7;
+  background-color: var(--bgColor);
+  color: var(--textColor);
 }

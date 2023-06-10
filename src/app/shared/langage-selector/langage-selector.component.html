@@ -1,26 +1,21 @@
-<div class="d-flex gap-3">
-  <app-theme-switcher></app-theme-switcher>
-
-  <div class="vr"></div>
-  <div class="dropdown">
-    <label
-      class="dropdown-toggle"
-      type="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      {{ current.flag }} {{ current.name }}
-    </label>
-    <ul class="dropdown-menu">
-      <li *ngFor="let lang of list">
-        <button
-          class="dropdown-item"
-          [ngClass]="{ active: lang.code === current.code }"
-          (click)="change(lang.code)"
-        >
-          {{ lang.flag }} {{ lang.name }}
-        </button>
-      </li>
-    </ul>
-  </div>
+<div class="dropdown">
+  <label
+    class="dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    {{ current.flag }} {{ current.name }}
+  </label>
+  <ul class="dropdown-menu">
+    <li *ngFor="let lang of list">
+      <button
+        class="dropdown-item"
+        [ngClass]="{ active: lang.code === current.code }"
+        (click)="change(lang.code)"
+      >
+        {{ lang.flag }} {{ lang.name }}
+      </button>
+    </li>
+  </ul>
 </div>
