@@ -10,11 +10,11 @@
     "about": {
       "title": "À propos de moi",
       "first_paragraph": "Passionné par l'informatique depuis mes 15 ans, j'ai débuté l'apprentissage du langage JavaScript en autodidacte. Par la suite, lors de mes études au lycée, j'ai choisi l'option complémentaire Informatique, et depuis ça ne m'a jamais quitté.",
-      "second_paragraph": "Suite à cela, j'ai commencé à développer des bots sur la plateforme Discord, afin de m'améliorer mais surtout pour m'amuser. Mes services ont été reconnus par certains membres de la communauté et depuis je n'ai jamais cessé d'en faire.",
-      "third_paragraph": "En dehors de l'informatique, j'aime beaucoup la musique. Je joue du piano depuis déjà 7ans, et je suis un grand passionné de moto, ainsi que du sport en général. J'ai fais 8 ans de natation en compétition, et je pratique régulièrement de l'escalade en bloc."
+      "second_paragraph": "Suite à cela, j'ai commencé à développer des bots sur la plateforme Discord, afin de m'améliorer, mais surtout pour m'amuser. Mes services ont été reconnus par certains membres de la communauté et depuis je n'ai jamais cessé d'en faire.",
+      "third_paragraph": "En dehors de l'informatique, j'aime beaucoup la musique. Je joue du piano depuis 2016, et je suis un grand passionné de moto, ainsi que du sport en général. J'ai fait 8 ans de natation en compétition, et je pratique régulièrement de l'escalade en bloc."
     },
     "education": {
-      "title": "Formations académique",
+      "title": "Formations académiques",
       "lycee": {
         "name": "Lycée Denis-de-Rougemont",
         "location": "Neuchâtel, Suisse",
