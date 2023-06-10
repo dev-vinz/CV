@@ -30,6 +30,10 @@ export class LangageSelectorComponent {
     return this.list.find((item) => item.code === lang)!;
   }
 
+  public get isMany(): boolean {
+    return this.list.length > 1;
+  }
+
   public get list(): Record<'flag' | 'code' | 'name', string>[] {
     return [
       {
@@ -42,6 +46,11 @@ export class LangageSelectorComponent {
         code: 'fr',
         name: 'Français',
       },
-    ];
+    ].filter((r) =>
+      this.translocoService
+        .getAvailableLangs()
+        .map((l) => l.toString())
+        .includes(r.code)
+    );
   }
 }

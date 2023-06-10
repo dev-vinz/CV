@@ -47,14 +47,16 @@
     "professional": {
       "title": "Expériences professionnelles",
       "uditis_2020": {
-        "name": "Uditis SA",
+        "name": "UDITIS SA",
         "year": "2020",
+        "duration": "5 Mois",
         "intro": "Lors de la première partie de l'année 2020, et pour une durée de 5 mois d'avril à août, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
         "description": "Je me suis occupé entre autres de créer une application desktop permettant de créer différents scénarios de test pour un de leur projet, les carnets ATA."
       },
       "uditis_2021": {
-        "name": "Uditis SA",
+        "name": "UDITIS SA",
         "year": "2021",
+        "duration": "6 Semaines",
         "intro": "Lors des vacances d'été de l'année 2021, pour une durée de 6 semaines, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
         "description": "Mon travail était de reprendre le développement débuté en 2020, et de l'améliorer."
       }

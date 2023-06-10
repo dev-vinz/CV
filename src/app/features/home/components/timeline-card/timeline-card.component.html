@@ -1,0 +1,18 @@
+<div class="timeline" [ngClass]="{ odd: isOdd }">
+  <div class="icon"></div>
+  <div class="date-content">
+    <div class="date-outer">
+      <span class="date">
+        <span class="month">{{ duration }}</span>
+        <span class="year">{{ startYear }}</span>
+      </span>
+    </div>
+  </div>
+  <div class="timeline-content">
+    <h5 class="title">{{ title }}</h5>
+    <p class="description">
+      {{ section }}<br />
+      {{ location }}
+    </p>
+  </div>
+</div>

@@ -1,13 +1,13 @@
 <div class="dropdown">
   <label
-    class="dropdown-toggle"
+    [ngClass]="{ 'dropdown-toggle': isMany }"
     type="button"
     data-bs-toggle="dropdown"
     aria-expanded="false"
   >
     {{ current.flag }} {{ current.name }}
   </label>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu" *ngIf="isMany">
     <li *ngFor="let lang of list">
       <button
         class="dropdown-item"
