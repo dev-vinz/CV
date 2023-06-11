@@ -13,10 +13,10 @@ export class TimelineCardComponent {
   public isOdd: boolean = false;
 
   @Input()
-  public duration: string = '';
+  public startDate: string = '';
 
   @Input()
-  public startYear: string = '';
+  public endDate: string = '';
 
   @Input()
   public title: string = '';
