@@ -1,3 +1,5 @@
 {
-  "home": {}
+  "home": {
+    "greeting": "Hello, World!"
+  }
 }

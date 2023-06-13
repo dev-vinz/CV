@@ -19,37 +19,37 @@
         "name": "Lycée Denis-de-Rougemont",
         "location": "Neuchâtel, Suisse",
         "section": "Physique et Application des Mathématiques",
-        "startDate": "09/2014",
-        "endDate": "07/18"
+        "startDate": "08.2014",
+        "endDate": "07.2018"
       },
       "epfl": {
         "name": "École Polytechnique Fédérale de Lausanne",
         "location": "Lausanne, Suisse",
         "section": "Premières années de Bachelor Microtechnique & Informatique",
-        "startDate": "09/2018",
-        "endDate": "12/19"
+        "startDate": "09.2018",
+        "endDate": "12.2019"
       },
       "hearc": {
         "name": "Haute École Arc Ingénierie",
         "location": "Neuchâtel, Suisse",
         "section": "Bachelor Informatique, en ingénierie logicielle",
-        "startDate": "09/2020",
-        "endDate": "08/23"
+        "startDate": "09.2020",
+        "endDate": "08.2023"
       }
     },
     "professional": {
       "title": "Expériences professionnelles",
       "uditis_2020": {
         "name": "UDITIS SA",
-        "startDate": "04/2020",
-        "endDate": "08/20",
+        "startDate": "04.2020",
+        "endDate": "08.2020",
         "intro": "Lors de la première partie de l'année 2020, et pour une durée de 5 mois, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
         "description": "Je me suis occupé entre autres de créer une application desktop permettant de créer différents scénarios de test pour un de leur projet, les carnets ATA."
       },
       "uditis_2021": {
         "name": "UDITIS SA",
-        "startDate": "07/2021",
-        "endDate": "08/21",
+        "startDate": "07.2021",
+        "endDate": "08.2021",
         "intro": "Lors des vacances d'été de l'année 2021, pour une durée de 6 semaines, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
         "description": "Mon travail était de reprendre le développement débuté en 2020, et de l'améliorer."
       }

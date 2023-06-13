@@ -23,6 +23,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: var(--textColor);
   cursor: pointer;
 
   &::before,
@@ -64,4 +65,15 @@
 .icon span {
   font-size: 2rem;
   color: var(--textColor);
+}
+
+@media screen and (max-width: 380px) {
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon span {
+    font-size: 1.5rem;
+  }
 }

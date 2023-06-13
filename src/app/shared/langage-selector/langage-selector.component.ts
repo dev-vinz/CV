@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
@@ -6,12 +6,24 @@ import { TranslocoService } from '@ngneat/transloco';
   templateUrl: './langage-selector.component.html',
   styleUrls: ['./langage-selector.component.scss'],
 })
-export class LangageSelectorComponent {
+export class LangageSelectorComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   constructor(private translocoService: TranslocoService) {}
+
+  ngOnInit(): void {
+    const browserLangs = navigator.languages;
+    const availableLangs =
+      this.translocoService.getAvailableLangs() as string[];
+
+    const lang =
+      browserLangs.find((lang) => availableLangs.includes(lang)) ??
+      this.translocoService.getDefaultLang();
+
+    this.translocoService.setActiveLang(lang);
+  }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                           PUBLIC                            *|
@@ -37,14 +49,19 @@ export class LangageSelectorComponent {
   public get list(): Record<'flag' | 'code' | 'name', string>[] {
     return [
       {
+        flag: '🇫🇷',
+        code: 'fr',
+        name: 'Français',
+      },
+      {
         flag: '🇬🇧',
         code: 'en',
         name: 'English',
       },
       {
-        flag: '🇫🇷',
-        code: 'fr',
-        name: 'Français',
+        flag: '🇩🇪',
+        code: 'de',
+        name: 'Deutsch',
       },
     ].filter((r) =>
       this.translocoService

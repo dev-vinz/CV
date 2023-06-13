@@ -74,8 +74,8 @@
 }
 
 .date-outer {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   font-size: 16px;
   text-align: center;
   margin: auto;
@@ -88,8 +88,8 @@
 .date-outer:before,
 .date-outer:after {
   content: "";
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   border-radius: 50%;
   position: absolute;
@@ -207,13 +207,13 @@
     display: none;
   }
   .date-outer {
-    width: 110px;
-    height: 110px;
+    width: 125px;
+    height: 125px;
   }
   .date-outer:before,
   .date-outer:after {
-    width: 110px;
-    height: 110px;
+    width: 125px;
+    height: 125px;
   }
   .year {
     font-size: 24px;
@@ -222,7 +222,7 @@
   .timeline.odd .timeline-content {
     width: 95%;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0 10px 10px;
   }
   .title {
     margin-bottom: 10px;
