@@ -23,6 +23,8 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          TOKEN_GITHUB_API: ${{ secrets.TOKEN_GITHUB_API }}
 
       - name: 📂 Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
