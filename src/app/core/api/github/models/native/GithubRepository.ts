@@ -1,4 +1,4 @@
-export class Repository {
+export class GithubRepository {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -74,6 +74,7 @@ export class Repository {
   private _open_issues: number;
   private _watchers: number;
   private _default_branch: string;
+  private _topics: string[];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -150,7 +151,8 @@ export class Repository {
     forks: number,
     open_issues: number,
     watchers: number,
-    default_branch: string
+    default_branch: string,
+    topics: string[]
   ) {
     this._id = id;
     this._node_id = node_id;
@@ -223,6 +225,7 @@ export class Repository {
     this._open_issues = open_issues;
     this._watchers = watchers;
     this._default_branch = default_branch;
+    this._topics = topics;
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -516,5 +519,9 @@ export class Repository {
 
   public get default_branch(): string {
     return this._default_branch;
+  }
+
+  public get topics(): string[] {
+    return this._topics;
   }
 }

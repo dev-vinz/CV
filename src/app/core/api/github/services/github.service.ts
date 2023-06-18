@@ -1,11 +1,10 @@
-import { Organization } from './../models/Organization';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Observable, firstValueFrom, lastValueFrom, map } from 'rxjs';
+import { OrganizationRequests } from '../http/OrganizationRequests';
+import { RepositoryRequests } from '../http/RepositoryRequests';
+import { UserRequests } from '../http/UserRequests';
 
-import { User } from '../models/User';
-import { Repository } from '../models/Repository';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -16,57 +15,56 @@ export class GithubService {
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private BASE_API_URL: string = 'https://api.github.com';
-  private AUTHORIZATION_HEADER: HttpHeaders = new HttpHeaders({
-    Authorization: `Bearer ${environment.GITHUB_API_TOKEN}`,
+  private static BASE_API_URL: string = 'https://api.github.com';
+  private static AUTHORIZATION_HEADER: HttpHeaders = new HttpHeaders({
+    Authorization: `Bearer ${environment.TOKEN_GITHUB_API}`,
   });
+
+  private _organizationsRequests: OrganizationRequests;
+  private _repositoriesRequests: RepositoryRequests;
+  private _userRequests: UserRequests;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  constructor(private http: HttpClient) {}
+  constructor(http: HttpClient) {
+    this._organizationsRequests = new OrganizationRequests(
+      http,
+      GithubService.BASE_API_URL,
+      GithubService.AUTHORIZATION_HEADER
+    );
+
+    this._repositoriesRequests = new RepositoryRequests(
+      http,
+      GithubService.BASE_API_URL,
+      GithubService.AUTHORIZATION_HEADER
+    );
+
+    this._userRequests = new UserRequests(
+      http,
+      GithubService.BASE_API_URL,
+      GithubService.AUTHORIZATION_HEADER
+    );
+  }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  /**
-   * Gets the organizations that the user is a member of.
-   */
-  public async organizations(): Promise<Organization[]> {
-    return await lastValueFrom(
-      this.http
-        .get<Organization[]>(`${this.BASE_API_URL}/user/orgs`, {
-          headers: this.AUTHORIZATION_HEADER,
-        })
-        .pipe()
-    );
+  /* * * * * * * * * * * * * * * *\
+  |*           GETTERS           *|
+  \* * * * * * * * * * * * * * * */
+
+  public get organizations(): OrganizationRequests {
+    return this._organizationsRequests;
   }
 
-  /**
-   * Gets the user's profile.
-   */
-  public async user(): Promise<User> {
-    return await lastValueFrom(
-      this.http
-        .get<User>(`${this.BASE_API_URL}/user`, {
-          headers: this.AUTHORIZATION_HEADER,
-        })
-        .pipe()
-    );
+  public get repositories(): RepositoryRequests {
+    return this._repositoriesRequests;
   }
 
-  /**
-   * Gets the user's repositories.
-   */
-  public async repositories(): Promise<Repository[]> {
-    return await lastValueFrom(
-      this.http
-        .get<Repository[]>(`${this.BASE_API_URL}/user/repos`, {
-          headers: this.AUTHORIZATION_HEADER,
-        })
-        .pipe()
-    );
+  public get user(): UserRequests {
+    return this._userRequests;
   }
 }
