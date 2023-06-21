@@ -5,6 +5,7 @@ export class User {
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+  private _id: number;
   private _name: string;
   private _username: string;
   private _avatarUrl: string;
@@ -21,6 +22,7 @@ export class User {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   constructor(
+    id: number,
     name: string,
     username: string,
     avatarUrl: string,
@@ -32,6 +34,7 @@ export class User {
     createdAt: Moment,
     updatedAt: Moment
   ) {
+    this._id = id;
     this._name = name;
     this._username = username;
     this._avatarUrl = avatarUrl;
@@ -51,6 +54,10 @@ export class User {
   /* * * * * * * * * * * * * * * *\
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
+
+  public get id(): number {
+    return this._id;
+  }
 
   public get name(): string {
     return this._name;

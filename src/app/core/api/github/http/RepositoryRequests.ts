@@ -38,4 +38,37 @@ export class RepositoryRequests extends GithubRequests {
 
     return parsedRepos;
   }
+
+  /**
+   * Gets the repository with the given id.
+   * @param id The id of the repository.
+   * @returns The repository.
+   * @throws An error if the repository does not exist.
+   */
+  public async getById(id: number): Promise<Repository> {
+    const url: string = `${this.apiUrl}/repositories/${id}`;
+    const options = { headers: this.authHeader };
+
+    const repo = await lastValueFrom(
+      this.http.get<GithubRepository>(url, options)
+    );
+
+    return await this.formatRepository(repo);
+  }
+
+  /**
+   * Gets the repository from the given url.
+   * @param url The url of the repository.
+   * @returns The repository.
+   * @throws An error if the repository does not exist.
+   */
+  public async getByUrl(url: string): Promise<Repository> {
+    const options = { headers: this.authHeader };
+
+    const repo = await lastValueFrom(
+      this.http.get<GithubRepository>(url, options)
+    );
+
+    return await this.formatRepository(repo);
+  }
 }

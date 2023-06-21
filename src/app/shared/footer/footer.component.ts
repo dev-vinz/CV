@@ -11,8 +11,8 @@ export class FooterComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private static NB_BUBBLES: number = 32;
+  private static START_YEAR: number = 2023;
 
-  public today: Date;
   public bubbleStyles: string[];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -20,7 +20,6 @@ export class FooterComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   constructor() {
-    this.today = new Date();
     this.bubbleStyles = [];
   }
 
@@ -36,6 +35,24 @@ export class FooterComponent implements OnInit {
 
       this.bubbleStyles.push(style);
     }
+  }
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+  |*                           PUBLIC                            *|
+  \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  /* * * * * * * * * * * * * * * *\
+  |*           GETTERS           *|
+  \* * * * * * * * * * * * * * * */
+
+  public get copyDate(): string {
+    const today = new Date();
+
+    if (today.getFullYear() === FooterComponent.START_YEAR) {
+      return `${FooterComponent.START_YEAR}`;
+    }
+
+    return `${FooterComponent.START_YEAR}-${today.getFullYear()}`;
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\

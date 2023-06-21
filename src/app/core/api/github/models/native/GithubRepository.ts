@@ -1,3 +1,5 @@
+import { GithubUser } from './GithubUser';
+
 export class GithubRepository {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
@@ -9,6 +11,7 @@ export class GithubRepository {
   private _full_name: string;
   private _html_url: string;
   private _description: string;
+  private _owner: GithubUser;
   private _fork: boolean;
   private _url: string;
   private _forks_url: string;
@@ -87,6 +90,7 @@ export class GithubRepository {
     full_name: string,
     html_url: string,
     description: string,
+    owner: GithubUser,
     fork: boolean,
     url: string,
     forks_url: string,
@@ -160,6 +164,7 @@ export class GithubRepository {
     this._full_name = full_name;
     this._html_url = html_url;
     this._description = description;
+    this._owner = owner;
     this._fork = fork;
     this._url = url;
     this._forks_url = forks_url;
@@ -236,7 +241,6 @@ export class GithubRepository {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  // Generates getters
   public get id(): number {
     return this._id;
   }
@@ -259,6 +263,10 @@ export class GithubRepository {
 
   public get description(): string {
     return this._description;
+  }
+
+  public get owner(): GithubUser {
+    return this._owner;
   }
 
   public get fork(): boolean {

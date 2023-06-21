@@ -1,6 +1,8 @@
-<div class="mt-5 text-center">
-  <img
-    src="https://media.tenor.com/MRCIli40TYoAAAAi/under-construction90s-90s.gif"
-    alt="coming soon"
-  />
+<div class="container">
+  <div class="mt-5 d-flex flex-wrap gap-4">
+    <app-preview-card
+      *ngFor="let repo of repositories"
+      [repository]="repo"
+    ></app-preview-card>
+  </div>
 </div>

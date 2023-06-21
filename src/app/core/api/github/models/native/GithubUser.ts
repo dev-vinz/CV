@@ -142,15 +142,15 @@ export class GithubUser {
     return this._id;
   }
 
-  public get nodeId(): string {
+  public get node_id(): string {
     return this._node_id;
   }
 
-  public get avatarUrl(): string {
+  public get avatar_url(): string {
     return this._avatar_url;
   }
 
-  public get gravatarId(): string {
+  public get gravatar_id(): string {
     return this._gravatar_id;
   }
 
@@ -158,43 +158,43 @@ export class GithubUser {
     return this._url;
   }
 
-  public get htmlUrl(): string {
+  public get html_url(): string {
     return this._html_url;
   }
 
-  public get followersUrl(): string {
+  public get followers_url(): string {
     return this._followers_url;
   }
 
-  public get followingUrl(): string {
+  public get following_url(): string {
     return this._following_url;
   }
 
-  public get gistsUrl(): string {
+  public get gists_url(): string {
     return this._gists_url;
   }
 
-  public get starredUrl(): string {
+  public get starred_url(): string {
     return this._starred_url;
   }
 
-  public get subscriptionsUrl(): string {
+  public get subscriptions_url(): string {
     return this._subscriptions_url;
   }
 
-  public get organizationsUrl(): string {
+  public get organizations_url(): string {
     return this._organizations_url;
   }
 
-  public get reposUrl(): string {
+  public get repos_url(): string {
     return this._repos_url;
   }
 
-  public get eventsUrl(): string {
+  public get events_url(): string {
     return this._events_url;
   }
 
-  public get receivedEventsUrl(): string {
+  public get received_events_url(): string {
     return this._received_events_url;
   }
 
@@ -202,7 +202,7 @@ export class GithubUser {
     return this._type;
   }
 
-  public get siteAdmin(): boolean {
+  public get site_admin(): boolean {
     return this._site_admin;
   }
 
@@ -234,15 +234,15 @@ export class GithubUser {
     return this._bio;
   }
 
-  public get twitterUsername(): string {
+  public get twitter_username(): string {
     return this._twitter_username;
   }
 
-  public get publicRepos(): number {
+  public get public_repos(): number {
     return this._public_repos;
   }
 
-  public get publicGists(): number {
+  public get public_gists(): number {
     return this._public_gists;
   }
 
@@ -254,27 +254,27 @@ export class GithubUser {
     return this._following;
   }
 
-  public get createdAt(): Date {
+  public get created_at(): Date {
     return this._created_at;
   }
 
-  public get updatedAt(): Date {
+  public get updated_at(): Date {
     return this._updated_at;
   }
 
-  public get privateGists(): number {
+  public get private_gists(): number {
     return this._private_gists;
   }
 
-  public get totalPrivateRepos(): number {
+  public get total_private_repos(): number {
     return this._total_private_repos;
   }
 
-  public get ownedPrivateRepos(): number {
+  public get owned_private_repos(): number {
     return this._owned_private_repos;
   }
 
-  public get diskUsage(): number {
+  public get disk_usage(): number {
     return this._disk_usage;
   }
 
@@ -282,7 +282,7 @@ export class GithubUser {
     return this._collaborators;
   }
 
-  public get twoFactorAuthentication(): boolean {
+  public get two_factor_authentication(): boolean {
     return this._two_factor_authentication;
   }
 }

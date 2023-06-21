@@ -1,0 +1,13 @@
+<ng-container *ngIf="repository !== undefined; else elseIfBlock">
+  <p>{{ repository.name }}</p>
+</ng-container>
+
+<ng-template #elseIfBlock>
+  <ng-container *ngIf="loading; else notMine">
+    <p>Loading...</p>
+  </ng-container>
+</ng-template>
+
+<ng-template #notMine>
+  <p>Repository not mine</p>
+</ng-template>

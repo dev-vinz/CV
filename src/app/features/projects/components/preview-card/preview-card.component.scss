@@ -1,0 +1,146 @@
+.preview-card {
+  position: relative;
+  width: 400px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.2s transform ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .imgBox {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 15px;
+    background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--sWV8Y0kc--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/kml9j34p9taplrnqtcez.jpg");
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 75%;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: -10px 10px 0 var(--bgColor);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: -10px 10px 0 var(--bgColor);
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: var(--bgHoverColor);
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    padding: 5px 20px;
+
+    .title {
+      position: absolute;
+      top: -80px;
+      left: 0;
+      height: 80px;
+      width: 75%;
+      background-color: var(--bgHoverColor);
+      border-top: 10px solid var(--bgColor);
+      border-right: 10px solid var(--bgColor);
+      border-top-right-radius: 25px;
+      text-transform: uppercase;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: -10px -10px 0 var(--bgColor);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -25px;
+        width: 25px;
+        height: 25px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: -10px 10px 0 var(--bgHoverColor);
+      }
+
+      span {
+        position: relative;
+        background-color: var(--borderColor);
+        padding: 10px 20px;
+        margin: 15px;
+        display: block;
+        border-radius: 7px;
+        color: var(--bgColor);
+        font-weight: 500;
+      }
+    }
+
+    .description {
+      margin: 10px 0px 20px 0px;
+      height: 3rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+
+    .badge {
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .preview-card {
+    width: 100%;
+    height: 330px;
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+
+    .imgBox {
+      height: 190px;
+    }
+
+    .content {
+      .title span {
+        font-size: 0.8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .description {
+        font-size: 0.75rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}

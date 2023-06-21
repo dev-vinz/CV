@@ -66,8 +66,10 @@ export class GithubRequests {
     );
 
     return new Repository(
+      repo.id,
       repo.name,
       repo.description,
+      this.formatUser(repo.owner),
       languages,
       repo.html_url,
       repo.topics,
@@ -79,16 +81,17 @@ export class GithubRequests {
 
   protected formatUser(user: GithubUser): User {
     return new User(
+      user.id,
       user.name,
       user.login,
-      user.avatarUrl,
-      user.htmlUrl,
+      user.avatar_url,
+      user.html_url,
       user.bio,
       user.location,
       user.email,
       user.blog,
-      moment(user.createdAt),
-      moment(user.updatedAt)
+      moment(user.created_at),
+      moment(user.updated_at)
     );
   }
 
