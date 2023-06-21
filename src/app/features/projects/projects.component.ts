@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Organization } from 'src/app/core/api/github/models/final/Organization';
 
 import { Repository } from 'src/app/core/api/github/models/final/Repository';
 import { GithubService } from 'src/app/core/api/github/services/github.service';

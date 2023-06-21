@@ -26,7 +26,7 @@ export class ProjectDetailComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     const projectId = +this.route.snapshot.params['id'];
-    const validIds = await this.service.user.getReposIds(true);
+    const validIds = await this.service.user.getReposIds();
 
     if (!isNaN(projectId) && validIds.includes(projectId)) {
       this._repository = await this.service.repositories.getById(projectId);

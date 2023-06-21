@@ -8,7 +8,11 @@ import { PreviewCardComponent } from './components/preview-card/preview-card.com
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 
 @NgModule({
-  declarations: [ProjectsComponent, PreviewCardComponent, ProjectDetailComponent],
+  declarations: [
+    ProjectsComponent,
+    PreviewCardComponent,
+    ProjectDetailComponent,
+  ],
   imports: [CommonModule, ProjectsRoutingModule, TranslocoModule],
 })
 export class ProjectsModule {}

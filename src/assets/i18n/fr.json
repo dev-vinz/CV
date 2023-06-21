@@ -1,7 +1,7 @@
 {
   "header": {
     "navbar-home": "Mes informations",
-    "navbar-projects": "Mes projets"
+    "navbar-portfolio": "Mon portfolio"
   },
   "home": {
     "greeting": "Bienvenue",

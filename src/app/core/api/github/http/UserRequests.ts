@@ -38,7 +38,10 @@ export class UserRequests extends GithubRequests {
    * @param owns Whether to get the user's repositories or the user's owned repositories.
    * @returns The user's repositories' urls.
    */
-  public async getReposApiUrl(owns: boolean = false): Promise<string[]> {
+  public async getReposApiUrl(
+    owns: boolean = false,
+    orgs: boolean = false
+  ): Promise<string[]> {
     const url: string = `${this.apiUrl}/user/repos`;
     const options = { headers: this.authHeader };
 
@@ -49,6 +52,7 @@ export class UserRequests extends GithubRequests {
 
     return repos
       .filter((repo) => (owns ? repo.owner.id === user.id : true))
+      .filter((repo) => (orgs ? repo.owner.id !== user.id : true))
       .filter((repo) => repo.name !== user.username)
       .sort((r1, r2) =>
         r1.name.toUpperCase().localeCompare(r2.name.toUpperCase())
@@ -59,9 +63,13 @@ export class UserRequests extends GithubRequests {
   /**
    * Gets the user's repositories' ids.
    * @param owns Whether to get the user's repositories or the user's owned repositories.
+   * @param orgs Whether to get the user's repositories or the user's organizations' repositories.
    * @returns The user's repositories' ids.
    */
-  public async getReposIds(owns: boolean = false): Promise<number[]> {
+  public async getReposIds(
+    owns: boolean = false,
+    orgs: boolean = false
+  ): Promise<number[]> {
     const url: string = `${this.apiUrl}/user/repos`;
     const options = { headers: this.authHeader };
 
@@ -72,6 +80,7 @@ export class UserRequests extends GithubRequests {
 
     return repos
       .filter((repo) => (owns ? repo.owner.id === user.id : true))
+      .filter((repo) => (orgs ? repo.owner.id !== user.id : true))
       .filter((repo) => repo.name !== user.username)
       .map((repo) => repo.id);
   }

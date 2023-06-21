@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { LangageSelectorComponent } from './langage-selector/langage-selector.component';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { FooterComponent } from './footer/footer.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { FooterComponent } from './footer/footer.component';
     LangageSelectorComponent,
     ThemeSwitcherComponent,
     FooterComponent,
+    NotFoundComponent,
   ],
   imports: [CommonModule, RouterModule, TranslocoModule, FormsModule],
-  exports: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent, NotFoundComponent],
 })
 export class SharedModule {}
