@@ -1,9 +1,7 @@
-<div class="container">
-  <div *ngIf="repositories.length < 1" class="mt-5 text-center">LOADING</div>
-  <div class="mt-5 d-flex flex-wrap gap-4">
-    <app-preview-card
-      *ngFor="let repo of repositories"
-      [repository]="repo"
-    ></app-preview-card>
-  </div>
+<div *ngIf="repositories.length < 1" class="text-center">LOADING</div>
+<div class="d-flex flex-wrap gap-4">
+  <app-preview-card
+    *ngFor="let repo of repositories"
+    [repository]="repo"
+  ></app-preview-card>
 </div>

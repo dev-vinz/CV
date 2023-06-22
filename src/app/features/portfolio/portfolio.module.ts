@@ -10,6 +10,12 @@ import { ProjectsModule } from './pages/projects/projects.module';
 
 @NgModule({
   declarations: [PortfolioComponent],
-  imports: [CommonModule, PortfolioRoutingModule, TranslocoModule],
+  imports: [
+    CommonModule,
+    PortfolioRoutingModule,
+    TranslocoModule,
+    ProjectsModule,
+    OrganizationsModule,
+  ],
 })
 export class PortfolioModule {}

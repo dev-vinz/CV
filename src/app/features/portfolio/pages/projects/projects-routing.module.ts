@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProjectsComponent } from './projects.component';
-import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
+import { CardComponent } from './components/card/card.component';
 
 const routes: Routes = [
-  { path: '', component: ProjectsComponent },
-  { path: ':id', component: ProjectDetailComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/portfolio' },
+  { path: ':name', component: CardComponent },
 ];
 
 @NgModule({

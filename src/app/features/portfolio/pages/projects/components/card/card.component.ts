@@ -5,17 +5,17 @@ import { Repository } from 'src/app/core/api/github/models/final/Repository';
 import { GithubService } from 'src/app/core/api/github/services/github.service';
 
 @Component({
-  selector: 'app-project-detail',
-  templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.scss'],
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
 })
-export class ProjectDetailComponent implements OnInit {
+export class CardComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private _repository!: Repository;
   private _loading: boolean = true;
+  private _repository!: Repository;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -24,11 +24,17 @@ export class ProjectDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: GithubService) {}
 
   async ngOnInit(): Promise<void> {
-    const projectId = +this.route.snapshot.params['id'];
-    const validIds = await this.service.user.getReposIds();
+    const projectName = this.route.snapshot.params['name'];
+    const owner = await this.service.user.get();
+    const validNames = (await this.service.user.getReposNames(true)).map(
+      (name) => name.toLowerCase()
+    );
 
-    if (!isNaN(projectId) && validIds.includes(projectId)) {
-      this._repository = await this.service.repositories.getById(projectId);
+    if (validNames.includes(projectName)) {
+      this._repository = await this.service.repositories.getByName(
+        owner.username,
+        projectName
+      );
     }
 
     this._loading = false;
@@ -42,11 +48,11 @@ export class ProjectDetailComponent implements OnInit {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  public get repository(): Repository {
-    return this._repository;
-  }
-
   public get loading(): boolean {
     return this._loading;
+  }
+
+  public get repository(): Repository {
+    return this._repository;
   }
 }

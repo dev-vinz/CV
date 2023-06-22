@@ -2,11 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslocoModule } from '@ngneat/transloco';
 
+import { SharedModule } from 'src/app/shared/shared.module';
+
 import { OrganizationsRoutingModule } from './organizations-routing.module';
 import { OrganizationsComponent } from './organizations.component';
 
 @NgModule({
   declarations: [OrganizationsComponent],
-  imports: [CommonModule, OrganizationsRoutingModule, TranslocoModule],
+  imports: [
+    CommonModule,
+    OrganizationsRoutingModule,
+    SharedModule,
+    TranslocoModule,
+  ],
+  exports: [OrganizationsComponent],
 })
 export class OrganizationsModule {}
