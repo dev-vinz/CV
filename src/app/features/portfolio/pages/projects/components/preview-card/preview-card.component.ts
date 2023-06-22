@@ -26,6 +26,6 @@ export class PreviewCardComponent {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   public onViewRepository(): void {
-    this.router.navigateByUrl(`/projects/${this.repository.id}`);
+    this.router.navigateByUrl(`/portfolio/projects/${this.repository.id}`);
   }
 }

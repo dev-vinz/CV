@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TranslocoRootModule } from './transloco-root.module';
 
 import { HomeModule } from './features/home/home.module';
-import { ProjectsModule } from './features/projects/projects.module';
+import { PortfolioModule } from './features/portfolio/portfolio.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

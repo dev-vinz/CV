@@ -1,38 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { isNumber } from '@ngneat/transloco';
 
 import { Repository } from 'src/app/core/api/github/models/final/Repository';
 import { GithubService } from 'src/app/core/api/github/services/github.service';
 
 @Component({
-  selector: 'app-project-detail',
-  templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.scss'],
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss'],
 })
-export class ProjectDetailComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private _repository!: Repository;
-  private _loading: boolean = true;
+  private _repositories: Repository[] = [];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  constructor(private route: ActivatedRoute, private service: GithubService) {}
+  constructor(private service: GithubService) {}
 
   async ngOnInit(): Promise<void> {
-    const projectId = +this.route.snapshot.params['id'];
-    const validIds = await this.service.user.getReposIds();
+    const tabUrls = await this.service.user.getReposApiUrl(true);
 
-    if (!isNaN(projectId) && validIds.includes(projectId)) {
-      this._repository = await this.service.repositories.getById(projectId);
-    }
+    tabUrls.forEach(async (url) => {
+      const repository = await this.service.repositories.getByUrl(url);
 
-    this._loading = false;
+      this._repositories.push(repository);
+      this._repositories = this._repositories.sort((r1, r2) =>
+        r1.name.toUpperCase().localeCompare(r2.name.toUpperCase())
+      );
+    });
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -43,11 +42,7 @@ export class ProjectDetailComponent implements OnInit {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  public get repository(): Repository {
-    return this._repository;
-  }
-
-  public get loading(): boolean {
-    return this._loading;
+  public get repositories(): Repository[] {
+    return this._repositories;
   }
 }
