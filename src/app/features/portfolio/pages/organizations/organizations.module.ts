@@ -6,9 +6,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { OrganizationsRoutingModule } from './organizations-routing.module';
 import { OrganizationsComponent } from './organizations.component';
+import { PreviewCardComponent } from './components/preview-card/preview-card.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
-  declarations: [OrganizationsComponent],
+  declarations: [OrganizationsComponent, PreviewCardComponent, CardComponent],
   imports: [
     CommonModule,
     OrganizationsRoutingModule,

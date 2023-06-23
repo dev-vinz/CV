@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private service: GithubService) {}
 
   async ngOnInit(): Promise<void> {
-    const tabUrls = await this.service.user.getReposApiUrl(true);
+    const tabUrls = await this.service.repositories.allApiUrls(true);
 
     tabUrls.forEach(async (url) => {
       const repository = await this.service.repositories.getByUrl(url);

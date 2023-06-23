@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     const projectName = this.route.snapshot.params['name'];
     const owner = await this.service.user.get();
-    const validNames = (await this.service.user.getReposNames(true)).map(
+    const validNames = (await this.service.repositories.allNames(true)).map(
       (name) => name.toLowerCase()
     );
 

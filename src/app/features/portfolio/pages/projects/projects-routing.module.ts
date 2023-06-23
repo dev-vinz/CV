@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from './pages/card/card.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/portfolio' },
