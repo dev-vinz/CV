@@ -1,5 +1,7 @@
-<div *ngIf="repositories.length < 1" class="text-center">LOADING</div>
-<div class="d-flex flex-wrap gap-4">
+<div *ngIf="repositories.length < 1" class="text-center">
+  <app-loading [centered]="true"></app-loading>
+</div>
+<div class="d-flex flex-wrap gap-4 preview-cards-container">
   <app-preview-card
     *ngFor="let repo of repositories"
     [repository]="repo"

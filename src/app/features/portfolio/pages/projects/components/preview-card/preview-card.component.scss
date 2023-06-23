@@ -49,7 +49,7 @@
     position: relative;
     width: 100%;
     height: 130px;
-    background-color: var(--bgHoverColor);
+    background-color: var(--bgLightColor);
     border-radius: 15px;
     border-top-left-radius: 0;
     padding: 5px 20px;
@@ -60,7 +60,7 @@
       left: 0;
       height: 80px;
       width: 75%;
-      background-color: var(--bgHoverColor);
+      background-color: var(--bgLightColor);
       border-top: 10px solid var(--bgColor);
       border-right: 10px solid var(--bgColor);
       border-top-right-radius: 25px;
@@ -85,17 +85,17 @@
         height: 25px;
         background: transparent;
         border-radius: 50%;
-        box-shadow: -10px 10px 0 var(--bgHoverColor);
+        box-shadow: -10px 10px 0 var(--bgLightColor);
       }
 
       span {
         position: relative;
-        background-color: var(--borderColor);
+        background-color: var(--bgColor);
         padding: 10px 20px;
         margin: 15px;
         display: block;
         border-radius: 7px;
-        color: var(--bgColor);
+        color: var(--primaryColor);
         font-weight: 500;
       }
     }
@@ -111,6 +111,8 @@
     }
 
     .badge {
+      background-color: var(--bgColor);
+      color: var(--primaryColor);
       padding: 10px;
     }
   }

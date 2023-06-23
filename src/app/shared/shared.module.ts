@@ -10,6 +10,7 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,13 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     FooterComponent,
     NotFoundComponent,
     ProjectDetailComponent,
+    LoadingComponent,
   ],
   imports: [CommonModule, RouterModule, TranslocoModule, FormsModule],
   exports: [
-    HeaderComponent,
     FooterComponent,
+    HeaderComponent,
+    LoadingComponent,
     NotFoundComponent,
     ProjectDetailComponent,
   ],

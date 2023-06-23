@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: var(--textColor);
+  color: var(--primaryColor);
   cursor: pointer;
 
   &::before,
@@ -43,7 +43,7 @@
     border-left: 4px solid;
     border-right: 4px solid;
     transform: skewX(20deg);
-    color: var(--textColor);
+    color: var(--primaryColor);
   }
 
   &:hover::after {
@@ -51,11 +51,11 @@
     border-top: 4px solid;
     border-bottom: 4px solid;
     transform: skewY(-20deg);
-    color: var(--textColor);
+    color: var(--primaryColor);
   }
 
   &:hover .tooltip {
-    color: var(--textColor);
+    color: var(--primaryColor);
     top: -45px;
     opacity: 1;
     pointer-events: auto;
@@ -64,7 +64,7 @@
 
 .icon span {
   font-size: 2rem;
-  color: var(--textColor);
+  color: var(--primaryColor);
 }
 
 @media screen and (max-width: 380px) {

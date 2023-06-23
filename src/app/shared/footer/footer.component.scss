@@ -12,13 +12,13 @@ footer {
     left: 0;
     right: 0;
     height: 1rem;
-    background: var(--bgHoverColor);
+    background: var(--bgLightColor);
     filter: url("#blob");
 
     .bubble {
       position: absolute;
       left: var(--position, 50%);
-      background: var(--bgHoverColor);
+      background: var(--bgLightColor);
       border-radius: 100%;
       animation: bubble-size var(--time, 2s) ease-in infinite var(--delay, 0s),
         bubble-move var(--time, 2s) ease-in infinite var(--delay, 0s);
@@ -31,7 +31,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bgHoverColor);
+    background: var(--bgLightColor);
   }
 }
 

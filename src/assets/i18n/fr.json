@@ -54,5 +54,12 @@
         "description": "Mon travail était de reprendre le développement débuté en 2020, et de l'améliorer."
       }
     }
+  },
+  "portfolio": {
+    "my-orgs": "Mes organisations",
+    "my-projects": "Mes projets personnels"
+  },
+  "tools": {
+    "loading": "Chargement..."
   }
 }

@@ -2,19 +2,23 @@
 
 @mixin lighten() {
   --bgColor: #f2f2f7;
-  --bgHoverColor: #d7d7e4;
+  --bgLightColor: #d7d7e4;
   --rgba01: rgba(33, 33, 33, 0.1);
-  --textColor: #212121;
-  --textHoverColor: #424242;
+  --primaryColor: #212121;
+  --primaryLightColor: #424242;
+  --secondaryColor: #309054;
+  --thirdColor: #008fff;
   --borderColor: #212121;
 }
 
 @mixin darken() {
   --bgColor: #212121;
-  --bgHoverColor: #424242;
+  --bgLightColor: #424242;
   --rgba01: rgba(242, 242, 247, 0.1);
-  --textColor: #f2f2f7;
-  --textHoverColor: #d7d7e4;
+  --primaryColor: #f2f2f7;
+  --primaryLightColor: #d7d7e4;
+  --secondaryColor: #44cc77;
+  --thirdColor: #45adff;
   --borderColor: #f2f2f7;
 }
 
@@ -30,5 +34,5 @@ body {
   font-family: "Poppins", sans-serif;
 
   background-color: var(--bgColor);
-  color: var(--textColor);
+  color: var(--primaryColor);
 }

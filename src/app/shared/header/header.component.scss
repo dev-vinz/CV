@@ -7,10 +7,10 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: var(--textHoverColor);
+  color: var(--primaryLightColor);
 
   &:hover,
   &.active {
-    color: var(--textColor);
+    color: var(--primaryColor);
   }
 }

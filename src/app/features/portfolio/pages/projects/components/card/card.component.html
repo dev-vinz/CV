@@ -3,8 +3,8 @@
 </ng-container>
 
 <ng-template #elseIfBlock>
-  <ng-container *ngIf="loading; else notMine">
-    <p>Loading...</p>
+  <ng-container *ngIf="loading; else notMine" class="mt-5">
+    <app-loading [centered]="true" [verticalMargin]="75"></app-loading>
   </ng-container>
 </ng-template>
 
