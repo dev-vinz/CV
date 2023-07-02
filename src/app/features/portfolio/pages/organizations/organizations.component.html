@@ -1,1 +1,9 @@
-<app-loading></app-loading>
+<div *ngIf="organizations.length < 1" class="text-center">
+  <app-loading [centered]="true"></app-loading>
+</div>
+<div class="d-flex flex-wrap gap-4 preview-cards-container">
+  <app-preview-card
+    *ngFor="let org of organizations"
+    [organization]="org"
+  ></app-preview-card>
+</div>

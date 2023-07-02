@@ -1,37 +1,42 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Organization } from 'src/app/core/api/github/models/final/Organization';
 import { GithubService } from 'src/app/core/api/github/services/github.service';
 
 @Component({
-  selector: 'app-organizations',
-  templateUrl: './organizations.component.html',
-  styleUrls: ['./organizations.component.scss'],
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
 })
-export class OrganizationsComponent implements OnInit {
+export class CardComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private _organizations: Organization[] = [];
+  private _loading: boolean = true;
+  private _organization!: Organization;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  constructor(private service: GithubService) {}
+  constructor(private route: ActivatedRoute, private service: GithubService) {}
 
   async ngOnInit(): Promise<void> {
-    const tabNames = await this.service.organizations.allNames();
+    const organizationName = this.route.snapshot.params['name'];
+    const owner = await this.service.user.get();
+    const validNames = (await this.service.organizations.allNames()).map(
+      (name) => name.toLowerCase()
+    );
 
-    tabNames.forEach(async (name) => {
-      const organization = await this.service.organizations.get(name);
-
-      this._organizations.push(organization);
-      this._organizations = this._organizations.sort((o1, o2) =>
-        o1.username.toUpperCase().localeCompare(o2.username.toUpperCase())
+    if (validNames.includes(organizationName)) {
+      this._organization = await this.service.organizations.get(
+        organizationName
       );
-    });
+    }
+
+    this._loading = false;
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -42,7 +47,11 @@ export class OrganizationsComponent implements OnInit {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  public get organizations(): Organization[] {
-    return this._organizations;
+  get loading(): boolean {
+    return this._loading;
+  }
+
+  get organization(): Organization {
+    return this._organization;
   }
 }

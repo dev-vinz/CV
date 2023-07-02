@@ -1,1 +1,9 @@
-<p>preview-card works!</p>
+<div class="card">
+  <div class="imgBox">
+    <img [src]="organization.avatarUrl" [alt]="organization.name" />
+  </div>
+  <div class="content">
+    <h4>{{ organization.name }}</h4>
+    <a [routerLink]="url" class="url">Voir plus</a>
+  </div>
+</div>

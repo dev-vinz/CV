@@ -1,0 +1,13 @@
+<ng-container *ngIf="organization != undefined; else elseIfBlock">
+  <p>{{ organization.name }}</p>
+</ng-container>
+
+<ng-template #elseIfBlock>
+  <ng-container *ngIf="loading; else notMine" class="mt-5">
+    <app-loading [centered]="true" [verticalMargin]="75"></app-loading>
+  </ng-container>
+</ng-template>
+
+<ng-template #notMine>
+  <p>Organization not mine</p>
+</ng-template>

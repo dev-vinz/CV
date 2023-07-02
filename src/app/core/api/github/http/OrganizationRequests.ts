@@ -20,9 +20,20 @@ export class OrganizationRequests extends GithubRequests {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   /**
-   * Gets the organizations that the user is a member of.
+   * Gets all organizations.
+   * @returns All organizations.
    */
   public async all(): Promise<Organization[]> {
+    const tabNames = await this.allNames();
+
+    return Promise.all(tabNames.map(async (name) => await this.get(name)));
+  }
+
+  /**
+   * Gets the names of all organizations.
+   * @returns The names of all organizations.
+   */
+  public async allNames(): Promise<string[]> {
     const url: string = `${this.apiUrl}/user/orgs`;
     const options = { headers: this.authHeader };
 
@@ -30,13 +41,7 @@ export class OrganizationRequests extends GithubRequests {
       this.http.get<GithubOrganization[]>(url, options)
     );
 
-    const parsedOrgs: Organization[] = [];
-
-    orgs.forEach(async (org) => {
-      parsedOrgs.push(await this.formatOrganization(org));
-    });
-
-    return parsedOrgs;
+    return orgs.map((org) => org.login);
   }
 
   /**
