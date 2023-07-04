@@ -1,15 +1,16 @@
 .preview-card {
   position: relative;
-  width: 400px;
   height: 380px;
   display: flex;
+  color: var(--primaryColor);
+  text-decoration: none;
   flex-direction: column;
   justify-content: space-between;
   transition: 0.2s transform ease-in-out;
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
   }
 
   .imgBox {
@@ -17,8 +18,13 @@
     width: 100%;
     height: 240px;
     border-radius: 15px;
-    background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--sWV8Y0kc--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/kml9j34p9taplrnqtcez.jpg");
     background-size: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
 
     &::before {
       content: "";
@@ -94,6 +100,9 @@
         padding: 10px 20px;
         margin: 15px;
         display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         border-radius: 7px;
         color: var(--primaryColor);
         font-weight: 500;
@@ -114,35 +123,6 @@
       background-color: var(--bgColor);
       color: var(--primaryColor);
       padding: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .preview-card {
-    width: 100%;
-    height: 330px;
-    transition: none;
-
-    &:hover {
-      transform: none;
-    }
-
-    .imgBox {
-      height: 190px;
-    }
-
-    .content {
-      .title span {
-        font-size: 0.8rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .description {
-        font-size: 0.75rem;
-        height: 2.5rem;
-      }
     }
   }
 }

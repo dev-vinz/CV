@@ -1,5 +1,7 @@
-<div class="preview-card" (click)="onViewRepository()">
-  <div class="imgBox"></div>
+<a class="preview-card" [routerLink]="url" [title]="repository.name">
+  <div class="imgBox">
+    <img [src]="backgroundImage" />
+  </div>
   <div class="content">
     <div class="title">
       <span>{{ repository.name }}</span>
@@ -16,4 +18,4 @@
       </div>
     </div>
   </div>
-</div>
+</a>

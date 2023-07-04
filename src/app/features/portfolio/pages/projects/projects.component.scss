@@ -1,5 +1,4 @@
-@media screen and (max-width: 576px) {
-  .preview-cards-container > * {
-    flex-basis: 100%;
-  }
+.preview-card {
+  flex-basis: 400px;
+  flex-grow: 1;
 }

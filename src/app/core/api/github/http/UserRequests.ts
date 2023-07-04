@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { GithubRequests } from './GithubRequests';
 
 import { User } from '../models/final/User';
-import { GithubRepository } from '../models/native/GithubRepository';
 import { GithubUser } from '../models/native/GithubUser';
 
 export class UserRequests extends GithubRequests {

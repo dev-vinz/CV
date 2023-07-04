@@ -6,7 +6,7 @@
   <h2 class="fw-bolder">{{ "home.title" | transloco }}</h2>
   <p class="h4">{{ "home.subtitle" | transloco }}</p>
 
-  <div class="d-flex align-items-center justify-content-center my-3">
+  <div class="d-flex flex-wrap align-items-center justify-content-center my-3">
     <app-social-button
       [tooltip]="'Linkedin'"
       [url]="'https://www.linkedin.com/in/vincentjeannin/'"
@@ -37,7 +37,19 @@
     </app-social-button>
   </div>
 
-  <h2 class="mb-5 h3">{{ "home.about.title" | transloco }}</h2>
+  <div class="text-center">
+    <a
+      class="btn btn-outline-primary download-button"
+      href="/assets/documents/Vincent_Jeannin.pdf"
+      target="_blank"
+      download
+    >
+      <span class="me-2"><i class="fa-solid fa-download"></i></span>
+      {{ "home.download" | transloco }}
+    </a>
+  </div>
+
+  <h2 class="my-5 h3">{{ "home.about.title" | transloco }}</h2>
   <app-about-me class="mb-3"></app-about-me>
 
   <h2 class="my-5 h3">{{ "home.education.title" | transloco }}</h2>

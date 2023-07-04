@@ -2,7 +2,9 @@ footer {
   z-index: 1;
   display: grid;
   position: relative;
-  grid-area: footer;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
   min-height: 5rem;
   margin-top: 150px;
 
