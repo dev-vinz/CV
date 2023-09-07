@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Organization } from 'src/app/core/api/github/models/final/Organization';
+import { Repository } from 'src/app/core/api/github/models/final/Repository';
 import { GithubService } from 'src/app/core/api/github/services/github.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class CardComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private _loading: boolean = true;
-  private _organization!: Organization;
+  private _organization?: Organization;
+  private _repositories: Repository[] = [];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
@@ -25,7 +27,6 @@ export class CardComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     const organizationName = this.route.snapshot.params['name'];
-    const owner = await this.service.user.get();
     const validNames = (await this.service.organizations.allNames()).map(
       (name) => name.toLowerCase()
     );
@@ -37,6 +38,19 @@ export class CardComponent implements OnInit {
     }
 
     this._loading = false;
+
+    if (this._organization) {
+      const repoIds = await this.service.repositories.allIds(false, true);
+
+      repoIds.forEach(async (id) => {
+        const repo = await this.service.repositories.getById(id);
+
+        this._repositories.push(repo);
+        this._repositories.sort((r1, r2) =>
+          r1.name.toUpperCase().localeCompare(r2.name.toUpperCase())
+        );
+      });
+    }
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -47,11 +61,15 @@ export class CardComponent implements OnInit {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  get loading(): boolean {
+  public get loading(): boolean {
     return this._loading;
   }
 
-  get organization(): Organization {
+  public get organization(): Organization | undefined {
     return this._organization;
+  }
+
+  public get repositories(): Repository[] {
+    return this._repositories;
   }
 }

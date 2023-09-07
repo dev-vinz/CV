@@ -58,9 +58,20 @@
   },
   "portfolio": {
     "my-orgs": "Mes organisations",
-    "my-projects": "Mes projets personnels"
+    "my-projects": "Mes projets personnels",
+    "organizations": {
+      "go-back": "Retour aux organisations",
+      "preview-card": {
+        "see-more-button": "Voir plus"
+      }
+    },
+    "projects": {
+      "go-back": "Retour aux projets"
+    }
   },
   "tools": {
-    "loading": "Chargement..."
+    "loading": "Chargement...",
+    "not-found": "Page introuvable",
+    "go-home": "Retour à l'accueil"
   }
 }

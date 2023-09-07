@@ -28,7 +28,7 @@ export class ProjectsComponent implements OnInit {
       const repository = await this.service.repositories.getByUrl(url);
 
       this._repositories.push(repository);
-      this._repositories = this._repositories.sort((r1, r2) =>
+      this._repositories.sort((r1, r2) =>
         r1.name.toUpperCase().localeCompare(r2.name.toUpperCase())
       );
     });

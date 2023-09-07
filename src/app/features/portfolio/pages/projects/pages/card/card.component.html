@@ -9,5 +9,8 @@
 </ng-template>
 
 <ng-template #notMine>
-  <p>Repository not mine</p>
+  <app-not-found
+    backUrl="/portfolio/projects"
+    [backText]="'portfolio.projects.go-back' | transloco"
+  ></app-not-found>
 </ng-template>

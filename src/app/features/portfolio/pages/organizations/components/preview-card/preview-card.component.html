@@ -4,6 +4,8 @@
   </div>
   <div class="content">
     <h4>{{ organization.name }}</h4>
-    <a [routerLink]="url" class="url">Voir plus</a>
+    <a [routerLink]="url" class="url">{{
+      "portfolio.organizations.preview-card.see-more-button" | transloco
+    }}</a>
   </div>
 </div>

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { lastValueFrom } from 'rxjs';
 
@@ -24,7 +23,7 @@ export class PreviewCardComponent implements OnInit {
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   async ngOnInit(): Promise<void> {
     const fileImage = `/assets/images/projects/${this.repository.name.toLowerCase()}.png`;

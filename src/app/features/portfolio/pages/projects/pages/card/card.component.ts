@@ -38,6 +38,8 @@ export class CardComponent implements OnInit {
     }
 
     this._loading = false;
+
+    console.log(this._repository);
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\

@@ -1,5 +1,7 @@
 <ng-container *ngIf="organization != undefined; else elseIfBlock">
   <p>{{ organization.name }}</p>
+
+  <div *ngFor="let project of repositories">{{ project.name }}</div>
 </ng-container>
 
 <ng-template #elseIfBlock>
@@ -9,5 +11,8 @@
 </ng-template>
 
 <ng-template #notMine>
-  <p>Organization not mine</p>
+  <app-not-found
+    backUrl="/portfolio/organizations"
+    [backText]="'portfolio.organizations.go-back' | transloco"
+  ></app-not-found>
 </ng-template>

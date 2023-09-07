@@ -38,6 +38,12 @@ export class RepositoryRequests extends GithubRequests {
     ownerOnly: boolean = false,
     orgsOnly: boolean = false
   ): Promise<string[]> {
+    if (ownerOnly && orgsOnly) {
+      throw new Error(
+        "Cannot get both the user's repositories and the user's owned repositories."
+      );
+    }
+
     const url: string = `${this.apiUrl}/user/repos`;
     const options = { headers: this.authHeader };
 
@@ -66,6 +72,12 @@ export class RepositoryRequests extends GithubRequests {
     ownerOnly: boolean = false,
     orgsOnly: boolean = false
   ): Promise<number[]> {
+    if (ownerOnly && orgsOnly) {
+      throw new Error(
+        "Cannot get both the user's repositories and the user's owned repositories."
+      );
+    }
+
     const url: string = `${this.apiUrl}/user/repos`;
     const options = { headers: this.authHeader };
 
@@ -91,6 +103,12 @@ export class RepositoryRequests extends GithubRequests {
    * @returns The user's repositories' names.
    */
   public async allNames(ownerOnly: boolean = false, orgsOnly: boolean = false) {
+    if (ownerOnly && orgsOnly) {
+      throw new Error(
+        "Cannot get both the user's repositories and the user's owned repositories."
+      );
+    }
+
     const url: string = `${this.apiUrl}/user/repos`;
     const options = { headers: this.authHeader };
 
