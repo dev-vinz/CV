@@ -23,6 +23,6 @@ export class PreviewCardComponent {
   \* * * * * * * * * * * * * * * */
 
   public get url(): string {
-    return `/portfolio/organizations/${this.organization.username.toLowerCase()}`;
+    return this.organization.url;
   }
 }

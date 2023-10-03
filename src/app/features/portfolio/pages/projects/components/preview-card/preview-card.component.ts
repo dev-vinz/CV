@@ -50,6 +50,6 @@ export class PreviewCardComponent implements OnInit {
   }
 
   public get url(): string {
-    return `projects/${this.repository.name.toLowerCase()}`;
+    return this.repository.url;
   }
 }

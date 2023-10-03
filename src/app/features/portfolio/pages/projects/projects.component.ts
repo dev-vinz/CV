@@ -22,7 +22,8 @@ export class ProjectsComponent implements OnInit {
   constructor(private service: GithubService) {}
 
   async ngOnInit(): Promise<void> {
-    const tabUrls = await this.service.repositories.allApiUrls(true);
+    const owner = await this.service.user.get();
+    const tabUrls = await this.service.repositories.allApiUrls();
 
     tabUrls.forEach(async (url) => {
       const repository = await this.service.repositories.getByUrl(url);
@@ -30,6 +31,16 @@ export class ProjectsComponent implements OnInit {
       this._repositories.push(repository);
       this._repositories.sort((r1, r2) =>
         r1.name.toUpperCase().localeCompare(r2.name.toUpperCase())
+      );
+
+      this._repositories = this._repositories.filter(
+        (r, index, self) =>
+          index ===
+          self.findIndex(
+            (r2) =>
+              (r2.name === r.name && r2.owner.id !== owner.id) ||
+              r2.name === r.name
+          )
       );
     });
   }
