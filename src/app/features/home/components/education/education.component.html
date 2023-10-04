@@ -1,6 +1,14 @@
 <app-timeline>
   <app-timeline-card
     #card
+    startDate="{{ 'home.education.mse.startDate' | transloco }}"
+    endDate="{{ 'home.education.mse.endDate' | transloco }}"
+    title="{{ 'home.education.mse.name' | transloco }}"
+    section="{{ 'home.education.mse.section' | transloco }}"
+    location="{{ 'home.education.mse.location' | transloco }}"
+  ></app-timeline-card>
+  <app-timeline-card
+    #card
     startDate="{{ 'home.education.hearc.startDate' | transloco }}"
     endDate="{{ 'home.education.hearc.endDate' | transloco }}"
     title="{{ 'home.education.hearc.name' | transloco }}"
