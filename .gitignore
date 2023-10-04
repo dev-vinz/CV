@@ -2,8 +2,7 @@
 
 # Environment file
 .env
-environment.development.ts
-environment.production.ts
+environment.final.ts
 
 # Compiled output
 /dist

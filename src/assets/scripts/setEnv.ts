@@ -6,19 +6,13 @@ const { argv } = require('yargs');
 require('dotenv').config();
 const environment = argv.environment;
 
-function writeFileUsingFS(
-  targetPath,
-  environmentFileContent,
-  isProduction: boolean
-) {
+function writeFileUsingFS(targetPath, environmentFileContent) {
   writeFile(targetPath, environmentFileContent, function (err) {
     if (err) {
       console.log(err);
     }
     if (environmentFileContent !== '') {
-      console.log(
-        `[${isProduction ? 'PROD' : 'DEV'}] Wrote variables to ${targetPath}`
-      );
+      console.log(`Wrote variables to ${targetPath}`);
     }
   });
 }
@@ -27,9 +21,7 @@ function writeFileUsingFS(
 const isProduction = environment === 'production';
 
 // Choose the correct targetPath based on the environment chosen
-const targetPath = isProduction
-  ? './src/environments/environment.production.ts'
-  : './src/environments/environment.development.ts';
+const targetPath = './src/environments/environment.final.ts';
 
 // Actual content to be compiled dynamically and pasted into respective environment files
 const environmentFileContent = `export const environment = {
@@ -38,6 +30,6 @@ const environmentFileContent = `export const environment = {
   };
 `;
 
-writeFileUsingFS(targetPath, environmentFileContent, isProduction);
+writeFileUsingFS(targetPath, environmentFileContent);
 
 /* tslint:enable */
