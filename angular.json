@@ -42,7 +42,8 @@
             "allowedCommonJsDependencies": [
               "ngneat-transloc",
               "ngneat-transloco-locale",
-              "flat"
+              "flat",
+              "moment"
             ],
             "outputPath": "dist/cv",
             "index": "src/index.html",

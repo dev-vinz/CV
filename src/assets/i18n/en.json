@@ -6,7 +6,7 @@
   "home": {
     "greeting": "Welcome",
     "title": "I'm Vincent Jeannin",
-    "subtitle": "Software engineer, student in the HES-SO MSE Master's programme. Based in Switzerland",
+    "subtitle": "Software engineer. Based in Switzerland",
     "download": "Download my CV in PDF format",
     "about": {
       "title": "About me",
@@ -42,7 +42,7 @@
         "location": "Lausanne, Suisse",
         "section": "Master of Computer Science, in software engineering",
         "startDate": "09.2023",
-        "endDate": " "
+        "endDate": "12.2023"
       }
     },
     "professional": {
@@ -52,7 +52,7 @@
         "startDate": "04.2020",
         "endDate": "08.2020",
         "intro": "During the first part of 2020, I spent 5 months doing an internship at UDITIS SA, based in Peseux in the canton of Neuchâtel.",
-        "description": "One of my tasks was to create a desktop application that would allow different test scenarios to be created for one of their projects, the \"carnets ATA\"."
+        "description": "One of my tasks was to create a desktop application that would allow different test scenarios to be created for one of their projects."
       },
       "uditis_2021": {
         "name": "UDITIS SA",

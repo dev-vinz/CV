@@ -6,7 +6,7 @@
   "home": {
     "greeting": "Bienvenue",
     "title": "Je suis Vincent Jeannin",
-    "subtitle": "Ingénieur logiciel, étudiant au sein du Master MSE de la HES-SO. Basé en Suisse",
+    "subtitle": "Ingénieur logiciel. Basé en Suisse",
     "download": "Télécharger le CV au format PDF",
     "about": {
       "title": "À propos de moi",
@@ -42,7 +42,7 @@
         "location": "Lausanne, Suisse",
         "section": "Master Informatique, en ingénierie logicielle",
         "startDate": "09.2023",
-        "endDate": " "
+        "endDate": "12.2023"
       }
     },
     "professional": {
@@ -52,7 +52,7 @@
         "startDate": "04.2020",
         "endDate": "08.2020",
         "intro": "Lors de la première partie de l'année 2020, et pour une durée de 5 mois, j'ai effectué un stage dans l'entreprise UDITIS SA, située à Peseux, dans le canton de Neuchâtel.",
-        "description": "Je me suis occupé entre autres de créer une application desktop permettant de créer différents scénarios de test pour un de leur projet, les carnets ATA."
+        "description": "Je me suis occupé entre autres de créer une application desktop permettant de créer différents scénarios de test pour un de leur projet."
       },
       "uditis_2021": {
         "name": "UDITIS SA",

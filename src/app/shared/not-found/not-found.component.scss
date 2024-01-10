@@ -6,3 +6,7 @@
   --bs-btn-hover-bg: var(--primaryColor);
   --bs-btn-hover-border-color: var(--bgColor);
 }
+
+.col {
+  flex-basis: 300px;
+}
