@@ -38,15 +38,13 @@
   </div>
 
   <div class="text-center">
-    <a
+    <button
       class="btn btn-outline-primary download-button"
-      href="/assets/documents/Vincent_Jeannin.pdf"
-      target="_blank"
-      download
+      (click)="downloadCV()"
     >
       <span class="me-2"><i class="fa-solid fa-download"></i></span>
       {{ "home.download" | transloco }}
-    </a>
+    </button>
   </div>
 
   <h2 class="my-5 h3">{{ "home.about.title" | transloco }}</h2>
