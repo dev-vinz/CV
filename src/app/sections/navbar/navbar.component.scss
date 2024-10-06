@@ -1,0 +1,194 @@
+.vj-navbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem;
+
+  z-index: 9999;
+
+  transition: background-color 0.5s ease-in-out, padding 0.5s ease-in-out;
+
+  .vj-navbar-container {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    .vj-navbar-brand {
+      display: flex;
+
+      align-items: center;
+
+      color: inherit;
+      background-color: transparent;
+      border: none;
+
+      font-family: "Dancing Script", cursive;
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      img {
+        height: 2.5rem;
+
+        pointer-events: none;
+      }
+
+      span {
+        color: var(--vj-primary-color);
+      }
+    }
+
+    .vj-collapse {
+      display: flex;
+
+      align-items: center;
+
+      .vj-navbar-nav {
+        display: flex;
+
+        gap: 0.25rem;
+
+        margin: 0;
+        padding-left: 0;
+
+        list-style: none;
+
+        .vj-nav-link {
+          display: block;
+
+          padding: 0.5rem;
+
+          color: rgba(var(--vj-color-rgb), 0.7);
+
+          background-color: transparent;
+          border: none;
+
+          font-size: 0.9rem;
+          font-weight: 500;
+
+          transition: color 0.2s ease-in-out;
+
+          &.vj-active,
+          &:hover {
+            color: rgba(var(--vj-primary-color-rgb), 0.8);
+          }
+        }
+      }
+    }
+  }
+
+  &.vj-scrolled {
+    padding: 1rem 0;
+
+    background-color: var(--vj-body-bg);
+  }
+}
+
+/* Mobile adaptation */
+@media screen and (max-width: 767px) {
+  .vj-navbar {
+    padding: 0.5rem;
+
+    .vj-navbar-container {
+      position: static;
+
+      .vj-toggler {
+        display: flex;
+
+        align-items: center;
+
+        background-color: transparent;
+        border: none;
+
+        color: inherit;
+      }
+
+      .vj-collapse {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        height: 100vh;
+
+        z-index: -1;
+
+        transform: scale(0);
+        transform-origin: right;
+
+        transition: transform 0.5s ease-in-out;
+
+        .vj-profile-box {
+          position: absolute;
+
+          bottom: 0;
+          right: 0;
+
+          display: flex;
+
+          height: 80vh;
+
+          opacity: 0.2;
+          pointer-events: none;
+          z-index: -10;
+
+          img {
+            margin-top: auto;
+
+            max-height: 100%;
+            width: 100%;
+
+            object-fit: contain;
+          }
+        }
+
+        .vj-navbar-nav {
+          flex-direction: column;
+
+          align-items: flex-start;
+          justify-content: space-around;
+
+          height: calc(100% - 5rem);
+
+          margin-left: 2rem;
+          margin-top: 5rem;
+
+          .vj-nav-link {
+            font-size: 1rem;
+
+            text-align: center;
+          }
+        }
+
+        &.vj-open {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .vj-navbar {
+    .vj-navbar-container {
+      .vj-collapse {
+        justify-content: center;
+
+        .vj-navbar-nav {
+          align-items: center;
+
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

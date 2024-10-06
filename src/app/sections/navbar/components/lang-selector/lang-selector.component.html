@@ -1,0 +1,17 @@
+<div class="dropdown">
+  <button
+    class="vj-nav-link"
+    [class.dropdown-toggle]="isMany"
+    data-bs-toggle="dropdown"
+  >
+    <img [src]="iconUrl" [alt]="activeLang" />
+  </button>
+  <ul *ngIf="isMany" class="dropdown-menu dropdown-menu-end">
+    <li *ngFor="let lang of languages">
+      <button class="dropdown-item" (click)="changeLang(lang.code)">
+        <img [src]="buildIconUrl(lang.code)" [alt]="lang.name" />
+        <span>{{ lang.name }}</span>
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,57 @@
+<nav #navbar class="vj-navbar fixed-top">
+  <div class="vj-container vj-navbar-container">
+    <button class="vj-navbar-brand me-auto" (click)="scrollTo('home')">
+      <img class="me-2" src="images/logo.webp" alt="Vincent Jeannin" />
+      <div class="d-none d-sm-block">Vincent&nbsp;<span>Jeannin</span></div>
+    </button>
+    <button class="vj-toggler d-md-none" type="button" (click)="toggleMenu()">
+      <ng-icon [name]="menuIcon" size="1.5rem"></ng-icon>
+    </button>
+    <div class="vj-collapse" [class.vj-open]="isMenuOpen">
+      <div class="vj-profile-box d-md-none">
+        <img src="images/profile.webp" alt="Vincent Jeannin" />
+      </div>
+      <ul class="vj-navbar-nav">
+        <li class="vj-nav-item">
+          <button
+            class="vj-nav-link"
+            [class.vj-active]="isActive('about')"
+            (click)="scrollTo('about')"
+          >
+            {{ "n.about" | transloco }}
+          </button>
+        </li>
+        <li class="vj-nav-item">
+          <button
+            class="vj-nav-link"
+            [class.vj-active]="isActive('training')"
+            (click)="scrollTo('training')"
+          >
+            {{ "n.training" | transloco }}
+          </button>
+        </li>
+        <li class="vj-nav-item">
+          <button
+            class="vj-nav-link"
+            [class.vj-active]="isActive('projects')"
+            (click)="scrollTo('projects')"
+          >
+            {{ "n.projects" | transloco }}
+          </button>
+        </li>
+        <li class="vj-nav-item">
+          <button
+            class="vj-nav-link"
+            [class.vj-active]="isActive('contact')"
+            (click)="scrollTo('contact')"
+          >
+            {{ "n.contact" | transloco }}
+          </button>
+        </li>
+        <li class="vj-nav-item">
+          <app-lang-selector></app-lang-selector>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

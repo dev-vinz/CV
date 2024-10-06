@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Bootstrap */
+@import "bootstrap/scss/bootstrap";
+
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+:root {
+  /* RGB Colors */
+  --vj-color-rgb: 255, 255, 255;
+  --vj-body-bg-rgb: 31, 36, 45;
+  --vj-secondary-bg-rgb: 50, 57, 70;
+  --vj-primary-color-rgb: 29, 229, 255;
+  --vj-secondary-color-rgb: 60, 174, 163;
+
+  /* Full Colors */
+  --vj-color: rgb(var(--vj-color-rgb));
+  --vj-body-bg: rgb(var(--vj-body-bg-rgb));
+  --vj-secondary-bg: rgb(var(--vj-secondary-bg-rgb));
+  --vj-primary-color: rgb(var(--vj-primary-color-rgb));
+  --vj-secondary-color: rgb(var(--vj-secondary-color-rgb));
+}
+
+/* General Styles */
+body {
+  background-color: var(--vj-body-bg);
+  color: var(--vj-color);
+
+  font-family: "Poppins", sans-serif;
+
+  /* Custom container */
+  .vj-container {
+    position: relative;
+
+    max-width: var(--bs-breakpoint-xl);
+
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+}
