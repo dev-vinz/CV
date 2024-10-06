@@ -1,0 +1,67 @@
+footer {
+  display: grid;
+  position: relative;
+
+  width: 100%;
+  min-height: 5rem;
+
+  margin-top: 5rem;
+
+  z-index: 1;
+
+  .vj-bubbles {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+
+    background: var(--vj-secondary-bg);
+
+    filter: url("#blob");
+
+    .vj-bubble {
+      position: absolute;
+
+      left: var(--position, 50%);
+      bottom: 0;
+
+      background: var(--vj-secondary-bg);
+      border-radius: 100%;
+
+      transform: translate(-50%, 100%);
+      animation: bubble-animation var(--time, 2s) ease-in infinite
+        var(--delay, 0s);
+      -webkit-animation: bubble-animation var(--time, 2s) ease-in infinite
+        var(--delay, 0s);
+    }
+  }
+
+  .vj-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(var(--vj-color-rgb), 0.8);
+    background: var(--vj-secondary-bg);
+
+    font-size: 0.85rem;
+
+    z-index: 2;
+  }
+}
+
+@keyframes bubble-animation {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+    bottom: var(--distance, 10rem);
+  }
+}

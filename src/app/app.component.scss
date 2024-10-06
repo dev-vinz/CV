@@ -7,6 +7,14 @@
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
 
+  &.vj-footer {
+    transform: translateY(0);
+
+    &.vj-mobile-menu-opened {
+      transform: translateY(100%);
+    }
+  }
+
   &.vj-mobile-menu-opened {
     transform: scale(0);
   }

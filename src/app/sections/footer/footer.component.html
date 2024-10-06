@@ -1,1 +1,22 @@
-<p>footer works!</p>
+<footer>
+  <div class="vj-bubbles">
+    <div *ngFor="let style of bubbles" class="vj-bubble" [style]="style"></div>
+  </div>
+  <div class="vj-content">
+    {{ copyright }} &copy; Copyright, Vincent Jeannin. Tous droits réservés.
+  </div>
+</footer>
+
+<svg style="position: fixed; bottom: 0">
+  <defs>
+    <filter id="blob">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix
+        in="blur"
+        mode="matrix"
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+        result="blob"
+      />
+    </filter>
+  </defs>
+</svg>
