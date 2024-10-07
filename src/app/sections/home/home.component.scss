@@ -1,0 +1,51 @@
+.vj-home {
+  position: relative;
+
+  display: grid;
+
+  min-height: 100vh;
+
+  background-image: url("/images/home.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .vj-content {
+    display: grid;
+
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .vj-intro {
+      max-width: var(--bs-breakpoint-md);
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      span {
+        color: var(--vj-primary-color);
+      }
+
+      .vj-socials {
+        display: flex;
+
+        gap: 0.5rem;
+
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

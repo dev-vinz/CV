@@ -22,15 +22,15 @@ export class NavbarComponent implements AfterContentInit {
   |*                          CONSTANTS                          *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private readonly HEIGHT_OFFSET: number = 300;
+  private readonly HEIGHT_OFFSET: number = 150;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private _isMenuOpen: boolean = false;
+  private readonly _scrollSpy = inject(NgbScrollSpyService);
 
-  private _scrollSpy: NgbScrollSpyService = inject(NgbScrollSpyService);
+  private _isMenuOpen: boolean = false;
 
   @Output()
   public mobileMenuOpened: EventEmitter<boolean> = new EventEmitter();

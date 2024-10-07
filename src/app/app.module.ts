@@ -4,7 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NgIconsModule } from '@ng-icons/core';
+import {
+  faBrandDiscord,
+  faBrandGithub,
+  faBrandInstagram,
+  faBrandLinkedinIn,
+} from '@ng-icons/font-awesome/brands';
 import { faSolidBarsStaggered, faSolidX } from '@ng-icons/font-awesome/solid';
+
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 import { AppComponent } from './app.component';
 import { TranslocoRootModule } from './transloco-root.module';
@@ -17,6 +25,7 @@ import { NavbarComponent } from './sections/navbar/navbar.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { TrainingComponent } from './sections/training/training.component';
 
+import { SocialComponent } from './sections/home/components/social/social.component';
 import { LangSelectorComponent } from './sections/navbar/components/lang-selector/lang-selector.component';
 
 @NgModule({
@@ -29,12 +38,21 @@ import { LangSelectorComponent } from './sections/navbar/components/lang-selecto
     LangSelectorComponent,
     NavbarComponent,
     ProjectsComponent,
+    SocialComponent,
     TrainingComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    NgIconsModule.withIcons({ faSolidBarsStaggered, faSolidX }),
+    NgIconsModule.withIcons({
+      faBrandDiscord,
+      faBrandGithub,
+      faBrandInstagram,
+      faBrandLinkedinIn,
+      faSolidBarsStaggered,
+      faSolidX,
+    }),
+    NgxTypedJsModule,
     TranslocoRootModule,
   ],
   providers: [provideHttpClient()],

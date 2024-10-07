@@ -1,1 +1,49 @@
-<p>home works!</p>
+<div class="vj-home">
+  <div class="vj-content">
+    <div class="vj-container w-100 my-auto">
+      <div class="vj-intro">
+        <h4>{{ "h.hello" | transloco }}</h4>
+        <h1>Vincent Jeannin</h1>
+        <ngx-typed-js
+          [strings]="typedStrings"
+          [typeSpeed]="75"
+          [backSpeed]="30"
+          [backDelay]="5000"
+          [loop]="true"
+        >
+          <h3 class="mb-4">
+            {{ "h.i-am" | transloco }}
+            <span class="typing"></span>
+          </h3>
+        </ngx-typed-js>
+
+        <div class="vj-socials">
+          <app-social
+            faIcon="faBrandLinkedinIn"
+            url="https://www.linkedin.com/in/vincentjeannin"
+          ></app-social>
+          <app-social
+            faIcon="faBrandGithub"
+            url="https://www.github.com/dev-vinz"
+          ></app-social>
+          <app-social
+            faIcon="faBrandInstagram"
+            url="https://www.instagram.com/_vinz_j_/"
+          ></app-social>
+          <app-social
+            faIcon="faBrandDiscord"
+            url="https://www.discord.com/users/314808292876484608"
+          ></app-social>
+        </div>
+        <div class="vj-buttons">
+          <button class="vj-btn vj-btn-primary" (click)="scrollToAbout()">
+            {{ "h.discover-more" | transloco }}
+          </button>
+          <button class="vj-btn" (click)="downloadResume()">
+            {{ "h.download-resume" | transloco }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

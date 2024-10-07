@@ -3,7 +3,7 @@ footer {
   position: relative;
 
   width: 100%;
-  min-height: 5rem;
+  min-height: 6rem;
 
   margin-top: 5rem;
 
@@ -48,6 +48,8 @@ footer {
     background: var(--vj-secondary-bg);
 
     font-size: 0.85rem;
+
+    text-align: center;
 
     z-index: 2;
   }
