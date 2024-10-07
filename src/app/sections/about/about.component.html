@@ -1,1 +1,58 @@
-<p>about works!</p>
+<div class="vj-container">
+  <div class="row gap-3">
+    <div class="col-md-6">
+      <div class="vj-img-box">
+        <div class="vj-main">
+          <img src="images/motos.webp" alt="3 motos" />
+        </div>
+        <div class="vj-sub">
+          <img src="images/profile_fill.webp" alt="Vincent Jeannin" />
+        </div>
+      </div>
+    </div>
+    <div class="col mb-3">
+      <div class="vj-about">
+        <h2 class="vj-title">À propos</h2>
+        <p class="vj-description">
+          Intrigué par l'informatique et la programmation depuis mes 13 ans,
+          j'ai débuté l'apprentissage du langage JavaScript en autodidacte. Par
+          la suite, lors de mes études au lycée, j'ai choisi l'option
+          complémentaire Informatique, et à partir de ce moment-là ça ne m'a
+          jamais quitté.
+        </p>
+        <button class="vj-btn" (click)="toggleHobbies()">
+          Voir mes loisirs
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="vj-hobbies" [(ngbCollapse)]="isCollapsed">
+    <div class="row">
+      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+        <ng-icon name="faSolidMusic" size="1.5rem"></ng-icon>
+        Jouer du piano
+      </div>
+      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+        <ng-icon name="faSolidMountain" size="1.5rem"></ng-icon>
+        Grimper en bloc
+      </div>
+      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+        <ng-icon name="faSolidPersonSwimming" size="1.5rem"></ng-icon>
+        Nager
+      </div>
+      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+        <ng-icon name="faSolidMotorcycle" size="1.5rem"></ng-icon>
+        Faire de la moto
+      </div>
+      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+        <ng-icon name="faSolidPersonSnowboarding" size="1.5rem"></ng-icon>
+        Snowboarder
+      </div>
+      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+        <ng-icon name="faSolidFilm" size="1.5rem"></ng-icon>
+        Regarder des films et séries
+      </div>
+    </div>
+  </div>
+</div>

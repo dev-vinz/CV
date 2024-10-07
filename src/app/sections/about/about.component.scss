@@ -1,0 +1,77 @@
+.vj-img-box {
+  position: relative;
+
+  width: 100%;
+
+  margin-bottom: 4rem;
+
+  .vj-main img {
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  .vj-sub {
+    position: absolute;
+
+    top: 65%;
+    right: -4%;
+
+    width: 30%;
+
+    border-radius: 20px;
+
+    box-shadow: 5px 5px 20px rgba(var(--vj-color-rgb), 0.2);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.vj-about {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+
+  height: 100%;
+
+  .vj-title {
+    font-size: 3rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+  }
+
+  .vj-description {
+    color: rgba(var(--vj-color-rgb), 0.8);
+
+    font-weight: 300;
+  }
+
+  .vj-btn {
+    width: fit-content;
+  }
+}
+
+.vj-hobbies {
+  color: rgba(var(--vj-color-rgb), 0.8);
+
+  font-weight: 300;
+
+  .col {
+    display: flex;
+
+    align-items: center;
+    gap: 1rem;
+
+    ng-icon {
+      flex-shrink: 0;
+    }
+  }
+}

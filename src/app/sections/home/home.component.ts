@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   private readonly _scrollSpy = inject(NgbScrollSpyService);
 
-  private _typedStrings: string[] = [];
+  private _typedStrings: string[] = [''];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|

@@ -10,7 +10,16 @@ import {
   faBrandInstagram,
   faBrandLinkedinIn,
 } from '@ng-icons/font-awesome/brands';
-import { faSolidBarsStaggered, faSolidX } from '@ng-icons/font-awesome/solid';
+import {
+  faSolidBarsStaggered,
+  faSolidFilm,
+  faSolidMotorcycle,
+  faSolidMountain,
+  faSolidMusic,
+  faSolidPersonSnowboarding,
+  faSolidPersonSwimming,
+  faSolidX,
+} from '@ng-icons/font-awesome/solid';
 
 import { NgxTypedJsModule } from 'ngx-typed-js';
 
@@ -50,6 +59,12 @@ import { LangSelectorComponent } from './sections/navbar/components/lang-selecto
       faBrandInstagram,
       faBrandLinkedinIn,
       faSolidBarsStaggered,
+      faSolidFilm,
+      faSolidMusic,
+      faSolidMotorcycle,
+      faSolidMountain,
+      faSolidPersonSnowboarding,
+      faSolidPersonSwimming,
       faSolidX,
     }),
     NgxTypedJsModule,

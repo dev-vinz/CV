@@ -1,13 +1,16 @@
 .vj-card {
   display: block;
 
-  padding-top: 5rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 
   transform: scale(1);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
 
   &.vj-footer {
+    padding-bottom: 0;
+
     transform: translateY(0);
 
     &.vj-mobile-menu-opened {
