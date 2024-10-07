@@ -1,0 +1,28 @@
+.vj-training {
+  background-color: var(--vj-secondary-bg);
+
+  .vj-title {
+    margin-bottom: 3rem;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    text-align: center;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+
+  .vj-timeline-box {
+    max-width: var(--bs-breakpoint-sm);
+
+    margin: 0 auto;
+
+    border-left: 2px solid var(--vj-primary-color);
+
+    app-timeline-card:not(:last-child) {
+      display: block;
+
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -13,6 +13,8 @@ import {
 import {
   faSolidBarsStaggered,
   faSolidFilm,
+  faSolidGraduationCap,
+  faSolidMapPin,
   faSolidMotorcycle,
   faSolidMountain,
   faSolidMusic,
@@ -36,6 +38,7 @@ import { TrainingComponent } from './sections/training/training.component';
 
 import { SocialComponent } from './sections/home/components/social/social.component';
 import { LangSelectorComponent } from './sections/navbar/components/lang-selector/lang-selector.component';
+import { TimelineCardComponent } from './sections/training/components/timeline-card/timeline-card.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,7 @@ import { LangSelectorComponent } from './sections/navbar/components/lang-selecto
     ProjectsComponent,
     SocialComponent,
     TrainingComponent,
+    TimelineCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,9 +64,11 @@ import { LangSelectorComponent } from './sections/navbar/components/lang-selecto
       faBrandLinkedinIn,
       faSolidBarsStaggered,
       faSolidFilm,
-      faSolidMusic,
+      faSolidGraduationCap,
+      faSolidMapPin,
       faSolidMotorcycle,
       faSolidMountain,
+      faSolidMusic,
       faSolidPersonSnowboarding,
       faSolidPersonSwimming,
       faSolidX,

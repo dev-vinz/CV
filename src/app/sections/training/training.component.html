@@ -1,1 +1,34 @@
-<p>training works!</p>
+<div class="vj-training vj-py">
+  <div class="vj-container">
+    <h2 class="vj-title">
+      {{ "t.title" | transloco }}
+    </h2>
+
+    <div class="vj-timeline-box">
+      <app-timeline-card
+        degree="{{ 't.mse.degree' | transloco }}"
+        description="{{ 't.mse.description' | transloco }}"
+        location="{{ 't.mse.location' | transloco }}"
+        year="2023"
+      ></app-timeline-card>
+      <app-timeline-card
+        degree="{{ 't.he-arc.degree' | transloco }}"
+        description="{{ 't.he-arc.description' | transloco }}"
+        location="{{ 't.he-arc.location' | transloco }}"
+        year="2020 - 2023"
+      ></app-timeline-card>
+      <app-timeline-card
+        degree="{{ 't.epfl.degree' | transloco }}"
+        description="{{ 't.epfl.description' | transloco }}"
+        location="{{ 't.epfl.location' | transloco }}"
+        year="2018 - 2020"
+      ></app-timeline-card>
+      <app-timeline-card
+        degree="{{ 't.ddr.degree' | transloco }}"
+        description="{{ 't.ddr.description' | transloco }}"
+        location="{{ 't.ddr.location' | transloco }}"
+        year="2014 - 2018"
+      ></app-timeline-card>
+    </div>
+  </div>
+</div>

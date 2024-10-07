@@ -1,4 +1,4 @@
-<div class="vj-container">
+<div class="vj-container vj-py">
   <div class="row gap-3">
     <div class="col-md-6">
       <div class="vj-img-box">
@@ -12,16 +12,14 @@
     </div>
     <div class="col mb-3">
       <div class="vj-about">
-        <h2 class="vj-title">À propos</h2>
+        <h2 class="vj-title">
+          {{ "a.title" | transloco }}
+        </h2>
         <p class="vj-description">
-          Intrigué par l'informatique et la programmation depuis mes 13 ans,
-          j'ai débuté l'apprentissage du langage JavaScript en autodidacte. Par
-          la suite, lors de mes études au lycée, j'ai choisi l'option
-          complémentaire Informatique, et à partir de ce moment-là ça ne m'a
-          jamais quitté.
+          {{ "a.description" | transloco }}
         </p>
         <button class="vj-btn" (click)="toggleHobbies()">
-          Voir mes loisirs
+          {{ "a.see-hobbies" | transloco }}
         </button>
       </div>
     </div>
@@ -31,27 +29,27 @@
     <div class="row">
       <div class="col col-12 col-sm-6 col-lg-4 mb-3">
         <ng-icon name="faSolidMusic" size="1.5rem"></ng-icon>
-        Jouer du piano
+        {{ "a.play-piano" | transloco }}
       </div>
       <div class="col col-12 col-sm-6 col-lg-4 mb-3">
         <ng-icon name="faSolidMountain" size="1.5rem"></ng-icon>
-        Grimper en bloc
+        {{ "a.bloc-climbing" | transloco }}
       </div>
       <div class="col col-12 col-sm-6 col-lg-4 mb-3">
         <ng-icon name="faSolidPersonSwimming" size="1.5rem"></ng-icon>
-        Nager
+        {{ "a.swimming" | transloco }}
       </div>
       <div class="col col-12 col-sm-6 col-lg-4 mb-3">
         <ng-icon name="faSolidMotorcycle" size="1.5rem"></ng-icon>
-        Faire de la moto
+        {{ "a.motorcycle-riding" | transloco }}
       </div>
       <div class="col col-12 col-sm-6 col-lg-4 mb-3">
         <ng-icon name="faSolidPersonSnowboarding" size="1.5rem"></ng-icon>
-        Snowboarder
+        {{ "a.snowboarding" | transloco }}
       </div>
       <div class="col col-12 col-sm-6 col-lg-4 mb-3">
         <ng-icon name="faSolidFilm" size="1.5rem"></ng-icon>
-        Regarder des films et séries
+        {{ "a.watch-movies" | transloco }}
       </div>
     </div>
   </div>
