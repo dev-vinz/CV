@@ -99,3 +99,12 @@ body {
     }
   }
 }
+
+/* NgbModal adjustments */
+.modal {
+  z-index: 10000;
+}
+
+.modal-content {
+  overflow: hidden;
+}

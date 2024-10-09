@@ -1,0 +1,88 @@
+.vj-modal {
+  position: relative;
+
+  padding: 2rem 2rem 1rem 2rem;
+
+  background-color: var(--vj-secondary-bg);
+  color: var(--vj-color);
+
+  border-radius: 5px;
+
+  .vj-close {
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    background-color: transparent;
+    color: rgba(var(--vj-color-rgb), 0.8) !important;
+
+    border: none;
+
+    outline: none;
+
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--vj-color) !important;
+    }
+  }
+
+  .vj-icon {
+    width: 100%;
+
+    margin-bottom: 1rem;
+
+    text-align: center;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .vj-title {
+    margin-bottom: 1.5rem;
+    color: var(--vj-primary-color);
+
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .vj-subtitle {
+    margin-bottom: 1.5rem;
+    color: var(--vj-primary-color);
+
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .vj-description {
+    margin-bottom: 1.5rem;
+
+    color: rgba(var(--vj-color-rgb), 0.8);
+
+    font-size: 0.9rem;
+    font-weight: 300;
+
+    text-align: center;
+  }
+
+  .vj-footer {
+    display: flex;
+
+    justify-content: flex-end;
+
+    .vj-btn {
+      display: flex;
+
+      align-items: center;
+      gap: 0.5rem;
+
+      width: fit-content;
+
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="vj-modal">
+  <button class="vj-close" (click)="modal.dismiss()">
+    <ng-icon name="faSolidX" size="1.1rem"></ng-icon>
+  </button>
+  <div class="vj-icon">
+    <img [src]="imageUrl" [alt]="title" />
+  </div>
+  <h4 class="vj-title">{{ title }}</h4>
+  <div class="vj-description">
+    {{ description }}
+  </div>
+  <h5 class="vj-subtitle">{{ "p.tech-specs" | transloco }}</h5>
+  <div class="vj-description">
+    {{ technicalStack }}
+  </div>
+  <div *ngIf="projectUrl" class="vj-footer">
+    <a class="vj-btn vj-btn-primary" [href]="projectUrl" target="_blank">
+      <ng-icon name="faSolidArrowUpRightFromSquare" size="1.1rem"></ng-icon>
+      <span>{{ "p.website" | transloco }}</span>
+    </a>
+  </div>
+</div>

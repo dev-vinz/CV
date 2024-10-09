@@ -11,6 +11,7 @@ import {
   faBrandLinkedinIn,
 } from '@ng-icons/font-awesome/brands';
 import {
+  faSolidArrowUpRightFromSquare,
   faSolidBarsStaggered,
   faSolidFilm,
   faSolidGraduationCap,
@@ -38,6 +39,8 @@ import { TrainingComponent } from './sections/training/training.component';
 
 import { SocialComponent } from './sections/home/components/social/social.component';
 import { LangSelectorComponent } from './sections/navbar/components/lang-selector/lang-selector.component';
+import { ProjectCardComponent } from './sections/projects/components/project-card/project-card.component';
+import { ProjectModalComponent } from './sections/projects/components/project-modal/project-modal.component';
 import { TimelineCardComponent } from './sections/training/components/timeline-card/timeline-card.component';
 
 @NgModule({
@@ -49,10 +52,12 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
     HomeComponent,
     LangSelectorComponent,
     NavbarComponent,
+    ProjectCardComponent,
+    ProjectModalComponent,
     ProjectsComponent,
     SocialComponent,
-    TrainingComponent,
     TimelineCardComponent,
+    TrainingComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +67,7 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
       faBrandGithub,
       faBrandInstagram,
       faBrandLinkedinIn,
+      faSolidArrowUpRightFromSquare,
       faSolidBarsStaggered,
       faSolidFilm,
       faSolidGraduationCap,

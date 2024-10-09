@@ -84,6 +84,14 @@ export class HomeComponent implements OnInit {
       )
     );
 
-    this._typedStrings = [software, freelance];
+    const fullStack = await firstValueFrom(
+      this._translocoService.selectTranslate(
+        'full-stack-developer',
+        undefined,
+        'home'
+      )
+    );
+
+    this._typedStrings = [software, fullStack, freelance];
   }
 }

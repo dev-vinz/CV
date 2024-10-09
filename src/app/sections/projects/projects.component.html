@@ -1,1 +1,14 @@
-<p>projects works!</p>
+<div class="vj-container vj-py">
+  <h2 class="vj-title">{{ "p.title" | transloco }}</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-7 col-md-6 col-lg-4 mb-3">
+      <app-project-card
+        description="{{ 'p.squadbustersfr.description' | transloco }}"
+        projectUrl="https://squadbustersfrance.com"
+        technicalStack="{{ 'p.squadbustersfr.specs' | transloco }}"
+        title="{{ 'p.squadbustersfr.title' | transloco }}"
+      ></app-project-card>
+    </div>
+  </div>
+</div>
