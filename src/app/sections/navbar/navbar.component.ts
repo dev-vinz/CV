@@ -28,7 +28,7 @@ export class NavbarComponent implements AfterContentInit {
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private readonly _scrollSpy = inject(NgbScrollSpyService);
+  private readonly _scrollSpy = inject(NgbScrollSpyService, { skipSelf: true });
 
   private _isMenuOpen: boolean = false;
 
@@ -44,7 +44,7 @@ export class NavbarComponent implements AfterContentInit {
 
   public ngAfterContentInit(): void {
     this._scrollSpy.start({
-      fragments: ['home', 'about', 'training', 'projects', 'contact'],
+      fragments: ['home', 'about', 'projects', 'training', 'contact'],
     });
   }
 

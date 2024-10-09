@@ -1,11 +1,11 @@
 {
   "ddr": {
     "degree": "Lycée",
-    "description": "Section physique et application des mathématiques au lycée Denis-de-Rougemont",
+    "description": "Section Physique et Application des Mathématiques, au lycée Denis-de-Rougemont",
     "location": "Neuchâtel, Suisse"
   },
   "epfl": {
-    "degree": "Bachelor EPFL",
+    "degree": "Bachelor EPF",
     "description": "Premières années de bachelor microtechnique et informatique à l'EPFL",
     "location": "Lausanne, Suisse"
   },

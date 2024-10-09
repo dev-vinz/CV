@@ -1,55 +1,57 @@
-<div class="vj-container vj-py">
-  <div class="row gap-3">
-    <div class="col-md-6">
-      <div class="vj-img-box">
-        <div class="vj-main">
-          <img src="images/motos.webp" alt="3 motos" />
+<div class="vj-about vj-py">
+  <div class="vj-container">
+    <div class="row gap-3">
+      <div class="col-md-6">
+        <div class="vj-img-box">
+          <div class="vj-main">
+            <img src="images/motos.webp" alt="3 motos" />
+          </div>
+          <div class="vj-sub">
+            <img src="images/profile_fill.webp" alt="Vincent Jeannin" />
+          </div>
         </div>
-        <div class="vj-sub">
-          <img src="images/profile_fill.webp" alt="Vincent Jeannin" />
+      </div>
+      <div class="col mb-3">
+        <div class="vj-about">
+          <h2 class="vj-title">
+            {{ "a.title" | transloco }}
+          </h2>
+          <p class="vj-description">
+            {{ "a.description" | transloco }}
+          </p>
+          <button class="vj-btn" (click)="toggleHobbies()">
+            {{ "a.see-hobbies" | transloco }}
+          </button>
         </div>
       </div>
     </div>
-    <div class="col mb-3">
-      <div class="vj-about">
-        <h2 class="vj-title">
-          {{ "a.title" | transloco }}
-        </h2>
-        <p class="vj-description">
-          {{ "a.description" | transloco }}
-        </p>
-        <button class="vj-btn" (click)="toggleHobbies()">
-          {{ "a.see-hobbies" | transloco }}
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <div class="vj-hobbies" [(ngbCollapse)]="isCollapsed">
-    <div class="row">
-      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
-        <ng-icon name="faSolidMusic" size="1.5rem"></ng-icon>
-        {{ "a.play-piano" | transloco }}
-      </div>
-      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
-        <ng-icon name="faSolidMountain" size="1.5rem"></ng-icon>
-        {{ "a.bloc-climbing" | transloco }}
-      </div>
-      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
-        <ng-icon name="faSolidPersonSwimming" size="1.5rem"></ng-icon>
-        {{ "a.swimming" | transloco }}
-      </div>
-      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
-        <ng-icon name="faSolidMotorcycle" size="1.5rem"></ng-icon>
-        {{ "a.motorcycle-riding" | transloco }}
-      </div>
-      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
-        <ng-icon name="faSolidPersonSnowboarding" size="1.5rem"></ng-icon>
-        {{ "a.snowboarding" | transloco }}
-      </div>
-      <div class="col col-12 col-sm-6 col-lg-4 mb-3">
-        <ng-icon name="faSolidFilm" size="1.5rem"></ng-icon>
-        {{ "a.watch-movies" | transloco }}
+    <div class="vj-hobbies" [(ngbCollapse)]="isCollapsed">
+      <div class="row">
+        <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+          <ng-icon name="faSolidMusic" size="1.5rem"></ng-icon>
+          {{ "a.play-piano" | transloco }}
+        </div>
+        <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+          <ng-icon name="faSolidMountain" size="1.5rem"></ng-icon>
+          {{ "a.bloc-climbing" | transloco }}
+        </div>
+        <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+          <ng-icon name="faSolidPersonSwimming" size="1.5rem"></ng-icon>
+          {{ "a.swimming" | transloco }}
+        </div>
+        <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+          <ng-icon name="faSolidMotorcycle" size="1.5rem"></ng-icon>
+          {{ "a.motorcycle-riding" | transloco }}
+        </div>
+        <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+          <ng-icon name="faSolidPersonSnowboarding" size="1.5rem"></ng-icon>
+          {{ "a.snowboarding" | transloco }}
+        </div>
+        <div class="col col-12 col-sm-6 col-lg-4 mb-3">
+          <ng-icon name="faSolidFilm" size="1.5rem"></ng-icon>
+          {{ "a.watch-movies" | transloco }}
+        </div>
       </div>
     </div>
   </div>
