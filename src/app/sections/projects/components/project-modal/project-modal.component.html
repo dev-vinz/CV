@@ -13,10 +13,19 @@
   <div class="vj-description">
     {{ technicalStack }}
   </div>
-  <div *ngIf="projectUrl" class="vj-footer">
-    <a class="vj-btn vj-btn-primary" [href]="projectUrl" target="_blank">
+  <div class="vj-footer">
+    <a
+      *ngIf="projectUrl"
+      class="vj-btn vj-btn-primary"
+      [href]="projectUrl"
+      target="_blank"
+    >
       <ng-icon name="faSolidArrowUpRightFromSquare" size="1.1rem"></ng-icon>
       <span>{{ "p.website" | transloco }}</span>
+    </a>
+    <a *ngIf="githubUrl" class="vj-btn" [href]="githubUrl" target="_blank">
+      <ng-icon name="faBrandGithub" size="1.1rem"></ng-icon>
+      <span>{{ "p.github" | transloco }}</span>
     </a>
   </div>
 </div>

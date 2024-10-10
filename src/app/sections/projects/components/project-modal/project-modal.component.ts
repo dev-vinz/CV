@@ -17,6 +17,9 @@ export class ProjectModalComponent {
   public description: string = '';
 
   @Input()
+  public githubUrl?: string;
+
+  @Input()
   public projectUrl?: string;
 
   @Input()

@@ -19,6 +19,9 @@ export class ProjectCardComponent {
   public description: string = '';
 
   @Input()
+  public githubUrl?: string;
+
+  @Input()
   public projectUrl?: string;
 
   @Input()
@@ -37,6 +40,7 @@ export class ProjectCardComponent {
     });
 
     modalRef.componentInstance.description = this.description;
+    modalRef.componentInstance.githubUrl = this.githubUrl;
     modalRef.componentInstance.projectUrl = this.projectUrl;
     modalRef.componentInstance.technicalStack = this.technicalStack;
     modalRef.componentInstance.title = this.title;
