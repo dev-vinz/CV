@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { provideTranslocoScope } from '@jsverse/transloco';
 import { NgbScrollSpyService } from '@ng-bootstrap/ng-bootstrap';
 
 import { MessageBuilder } from 'webhook-discord';
@@ -10,6 +11,7 @@ import { CoreService } from '../../services/core.service';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
+  providers: [provideTranslocoScope({ scope: 'contact', alias: 'c' })],
 })
 export class ContactComponent {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\

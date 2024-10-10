@@ -1,0 +1,17 @@
+{
+  "description": "Vous pouvez me contacter en remplissant le formulaire ci-dessous.",
+  "email": "Adresse email",
+  "email-invalid": "L'adresse email n'est pas valide.",
+  "email-required": "L'adresse email est requise.",
+  "error": "Le formulaire contient des erreurs. Veuillez les corriger avant de soumettre le formulaire à nouveau.",
+  "first-name": "Prénom",
+  "first-name-required": "Le prénom est requis.",
+  "last-name": "Nom",
+  "last-name-required": "Le nom est requis.",
+  "message": "Message",
+  "message-required": "Le message est requis.",
+  "message-sent": "Votre message a été envoyé avec succès, je vous répondrai dès que possible.",
+  "phone": "Téléphone",
+  "send-message": "Envoyer le message",
+  "title": "Formulaire de contact"
+}

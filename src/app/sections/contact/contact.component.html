@@ -1,8 +1,10 @@
 <div class="vj-container vj-py">
-  <h2 class="vj-title">Formulaire de contact</h2>
+  <h2 class="vj-title">
+    {{ "c.title" | transloco }}
+  </h2>
 
   <p class="vj-description">
-    Vous pouvez me contacter en remplissant le formulaire ci-dessous.
+    {{ "c.description" | transloco }}
   </p>
 
   <form class="vj-form" [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -11,17 +13,16 @@
       class="alert alert-success alert-dismissible fade show"
       role="alert"
     >
-      Le message a bien été envoyé, je vous répondrai dans les plus brefs
-      délais.
+      {{ "c.message-sent" | transloco }}
       <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
     <div *ngIf="isError" class="alert alert-danger" role="alert">
-      Le formulaire contient des erreurs, veuillez les corriger
+      {{ "c.error" | transloco }}
     </div>
     <div class="row">
       <div class="col-sm-6 mb-3">
         <label for="firstName" class="form-label vj-label-required">
-          Prénom
+          {{ "c.first-name" | transloco }}
         </label>
         <input
           id="firstName"
@@ -32,11 +33,13 @@
           required
         />
         <div *ngIf="firstNameRequired" class="form-text vj-form-invalid">
-          Le prénom est requis.
+          {{ "c.first-name-required" | transloco }}
         </div>
       </div>
       <div class="col-sm-6 mb-3">
-        <label for="lastName" class="form-label vj-label-required">Nom</label>
+        <label for="lastName" class="form-label vj-label-required">
+          {{ "c.last-name" | transloco }}
+        </label>
         <input
           id="lastName"
           class="form-control"
@@ -46,13 +49,15 @@
           required
         />
         <div *ngIf="lastNameRequired" class="form-text vj-form-invalid">
-          Le nom est requis.
+          {{ "c.last-name-required" | transloco }}
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-7 col-md-8 mb-3">
-        <label for="email" class="form-label vj-label-required">Email</label>
+        <label for="email" class="form-label vj-label-required">
+          {{ "c.email" | transloco }}
+        </label>
         <input
           id="email"
           class="form-control"
@@ -62,14 +67,16 @@
           required
         />
         <div *ngIf="emailRequired" class="form-text vj-form-invalid">
-          L'email est requis.
+          {{ "c.email-required" | transloco }}
         </div>
         <div *ngIf="emailInvalid" class="form-text vj-form-invalid">
-          L'email n'est pas valide.
+          {{ "c.email-invalid" | transloco }}
         </div>
       </div>
       <div class="col-sm-5 col-md-4 mb-3">
-        <label for="phone" class="form-label">Téléphone</label>
+        <label for="phone" class="form-label">
+          {{ "c.phone" | transloco }}
+        </label>
         <input
           id="phone"
           class="form-control"
@@ -81,7 +88,7 @@
     <div class="row">
       <div class="col mb-3">
         <label for="message" class="form-label vj-label-required">
-          Message
+          {{ "c.message" | transloco }}
         </label>
         <textarea
           id="message"
@@ -93,14 +100,14 @@
           required
         ></textarea>
         <div *ngIf="messageRequired" class="form-text vj-form-invalid">
-          Le message est requis.
+          {{ "c.message-required" | transloco }}
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col text-center">
         <button class="vj-btn vj-btn-primary" type="submit">
-          Envoyer le message
+          {{ "c.send-message" | transloco }}
         </button>
       </div>
     </div>
