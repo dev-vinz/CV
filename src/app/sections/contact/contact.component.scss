@@ -1,0 +1,64 @@
+.vj-title {
+  margin-bottom: 3rem;
+
+  font-size: 3rem;
+  font-weight: 700;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.vj-description {
+  margin-bottom: 3rem;
+
+  color: rgba(var(--vj-color-rgb), 0.8);
+
+  font-weight: 300;
+
+  text-align: center;
+}
+
+.vj-form {
+  max-width: var(--bs-breakpoint-md);
+
+  margin: 0 auto;
+
+  .form-label {
+    color: rgba(var(--vj-color-rgb), 0.8);
+  }
+
+  .vj-label-required {
+    position: relative;
+
+    &::after {
+      content: "*";
+
+      position: absolute;
+
+      top: 0;
+      right: -0.75rem;
+
+      color: var(--bs-form-invalid-color);
+    }
+  }
+
+  .form-control {
+    background-color: var(--vj-secondary-bg);
+    border: 1px solid var(--vj-secondary-bg);
+    color: rgba(var(--vj-color-rgb), 0.8);
+
+    &:focus {
+      background-color: var(--vj-secondary-bg);
+      border-color: var(--vj-primary-color);
+      box-shadow: none;
+    }
+
+    &.vj-invalid {
+      border-color: var(--bs-form-invalid-border-color);
+    }
+  }
+
+  .vj-form-invalid {
+    color: var(--bs-form-invalid-color);
+  }
+}

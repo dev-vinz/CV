@@ -1,1 +1,108 @@
-<p>contact works!</p>
+<div class="vj-container vj-py">
+  <h2 class="vj-title">Formulaire de contact</h2>
+
+  <p class="vj-description">
+    Vous pouvez me contacter en remplissant le formulaire ci-dessous.
+  </p>
+
+  <form class="vj-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div
+      *ngIf="isSent"
+      class="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      Le message a bien été envoyé, je vous répondrai dans les plus brefs
+      délais.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <div *ngIf="isError" class="alert alert-danger" role="alert">
+      Le formulaire contient des erreurs, veuillez les corriger
+    </div>
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <label for="firstName" class="form-label vj-label-required">
+          Prénom
+        </label>
+        <input
+          id="firstName"
+          class="form-control"
+          [class.vj-invalid]="firstNameRequired"
+          type="text"
+          formControlName="firstName"
+          required
+        />
+        <div *ngIf="firstNameRequired" class="form-text vj-form-invalid">
+          Le prénom est requis.
+        </div>
+      </div>
+      <div class="col-sm-6 mb-3">
+        <label for="lastName" class="form-label vj-label-required">Nom</label>
+        <input
+          id="lastName"
+          class="form-control"
+          [class.vj-invalid]="lastNameRequired"
+          type="text"
+          formControlName="lastName"
+          required
+        />
+        <div *ngIf="lastNameRequired" class="form-text vj-form-invalid">
+          Le nom est requis.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-7 col-md-8 mb-3">
+        <label for="email" class="form-label vj-label-required">Email</label>
+        <input
+          id="email"
+          class="form-control"
+          [class.vj-invalid]="emailRequired || emailInvalid"
+          type="email"
+          formControlName="email"
+          required
+        />
+        <div *ngIf="emailRequired" class="form-text vj-form-invalid">
+          L'email est requis.
+        </div>
+        <div *ngIf="emailInvalid" class="form-text vj-form-invalid">
+          L'email n'est pas valide.
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-4 mb-3">
+        <label for="phone" class="form-label">Téléphone</label>
+        <input
+          id="phone"
+          class="form-control"
+          type="tel"
+          formControlName="phone"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="message" class="form-label vj-label-required">
+          Message
+        </label>
+        <textarea
+          id="message"
+          class="form-control"
+          [class.vj-invalid]="messageRequired"
+          formControlName="message"
+          rows="10"
+          autocomplete="off"
+          required
+        ></textarea>
+        <div *ngIf="messageRequired" class="form-text vj-form-invalid">
+          Le message est requis.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="vj-btn vj-btn-primary" type="submit">
+          Envoyer le message
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
