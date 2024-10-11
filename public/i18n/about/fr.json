@@ -1,11 +1,29 @@
 {
-  "bloc-climbing": "Faire de l'escalade en bloc",
   "description": "Intrigué par l'informatique et la programmation depuis mes 13 ans, j'ai débuté l'apprentissage du langage JavaScript en autodidacte. Par la suite, lors de mes études au lycée, j'ai choisi l'option complémentaire Informatique, et à partir de ce moment-là ça ne m'a jamais quitté.",
-  "motorcycle-riding": "Faire de la moto",
-  "play-piano": "Jouer du piano",
-  "see-hobbies": "Voir mes loisirs",
-  "snowboarding": "Snowboarder",
-  "swimming": "Nager",
-  "title": "À propos",
-  "watch-movies": "Regarder des films et des séries"
+  "hobbies": {
+    "bloc-climbing": "Faire de l'escalade en bloc",
+    "code": "Coder",
+    "motorcycle-riding": "Faire de la moto",
+    "play-piano": "Jouer du piano",
+    "snowboarding": "Faire du snowboard",
+    "swimming": "Nager",
+    "title": "Mes loisirs"
+  },
+  "informations": {
+    "licenses": "Permis de conduire A et B",
+    "old": "ans",
+    "swiss-nationality": "Nationalité Suisse",
+    "title": "Informations"
+  },
+  "personality": {
+    "ambitious": "Ambitieux",
+    "creative": "Créatif",
+    "curious": "Curieux",
+    "discret": "Discret",
+    "open-minded": "Ouvert d'esprit",
+    "team-player": "Esprit d'équipe",
+    "title": "Personnalité"
+  },
+  "read-more": "Lire d'avantage",
+  "title": "À propos"
 }

@@ -53,7 +53,7 @@
       box-shadow: none;
     }
 
-    &.vj-invalid {
+    &.vj-invalid:not(:focus) {
       border-color: var(--bs-form-invalid-border-color);
     }
   }

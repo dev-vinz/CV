@@ -62,10 +62,14 @@
     }
   }
 
-  .vj-hobbies {
+  .vj-more {
     color: rgba(var(--vj-color-rgb), 0.8);
 
     font-weight: 300;
+
+    .vj-more-title {
+      margin-bottom: 1.5rem;
+    }
 
     .col {
       display: flex;

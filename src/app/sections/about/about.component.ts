@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { provideTranslocoScope } from '@jsverse/transloco';
 
+import { environment } from '../../environments/environment';
+
+import moment from 'moment';
+import 'moment-timezone';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -18,13 +23,22 @@ export class AboutComponent {
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  public toggleHobbies(): void {
+  public toggleMore(): void {
     this._isCollapsed = !this._isCollapsed;
   }
 
   /* * * * * * * * * * * * * * * *\
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
+
+  public get birthdayDate(): string {
+    return environment.birthdayDate.format('DD.MM.YYYY');
+  }
+
+  public get currentAge(): number {
+    const now = moment().tz('Europe/Zurich');
+    return now.diff(environment.birthdayDate, 'years');
+  }
 
   public get isCollapsed(): boolean {
     return this._isCollapsed;

@@ -59,7 +59,11 @@
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
-            "allowedCommonJsDependencies": ["webhook-discord"]
+            "allowedCommonJsDependencies": [
+              "moment",
+              "moment-timezone",
+              "webhook-discord"
+            ]
           },
           "configurations": {
             "production": {
