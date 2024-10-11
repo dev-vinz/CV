@@ -40,6 +40,15 @@ export class AboutComponent {
     return now.diff(environment.birthdayDate, 'years');
   }
 
+  public get isBirthday(): boolean {
+    const birthday = environment.birthdayDate;
+    const today = moment().tz('Europe/Zurich');
+
+    return (
+      today.date() === birthday.date() && today.month() === birthday.month()
+    );
+  }
+
   public get isCollapsed(): boolean {
     return this._isCollapsed;
   }

@@ -80,6 +80,11 @@
       ng-icon {
         flex-shrink: 0;
       }
+
+      &.vj-active {
+        color: rgba(var(--vj-primary-color-rgb), 0.8);
+        font-weight: 500;
+      }
     }
   }
 }

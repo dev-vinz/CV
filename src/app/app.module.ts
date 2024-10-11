@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -48,6 +49,8 @@ import { NavbarComponent } from './sections/navbar/navbar.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { TrainingComponent } from './sections/training/training.component';
 
+import { BirthdayBallonsComponent } from './animations/birthday-ballons/birthday-ballons.component';
+
 import { SocialComponent } from './sections/home/components/social/social.component';
 import { LangSelectorComponent } from './sections/navbar/components/lang-selector/lang-selector.component';
 import { ProjectCardComponent } from './sections/projects/components/project-card/project-card.component';
@@ -58,6 +61,7 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
   declarations: [
     AboutComponent,
     AppComponent,
+    BirthdayBallonsComponent,
     ContactComponent,
     FooterComponent,
     HomeComponent,
@@ -72,6 +76,7 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     NgbModule,
     NgIconsModule.withIcons({
       faBrandDiscord,

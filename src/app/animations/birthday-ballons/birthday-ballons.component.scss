@@ -1,0 +1,82 @@
+.vj-balloons-container {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 99998;
+
+  transition: opacity 0.5 linear;
+
+  .vj-balloon {
+    position: relative;
+
+    width: 105px;
+    height: 125px;
+
+    border-radius: 75% 75% 70% 70%;
+
+    animation: float var(--vj-duration) ease-in;
+
+    opacity: 0;
+    z-index: 99999;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 125px;
+      left: 0;
+      right: 0;
+
+      display: block;
+
+      width: 1px;
+      height: 75px;
+
+      margin: auto;
+      padding: 1px;
+
+      background-color: #fdfd96;
+    }
+
+    &::after {
+      content: "▲";
+
+      position: absolute;
+
+      top: 120px;
+      left: 0;
+      right: 0;
+
+      display: block;
+
+      margin: auto;
+
+      color: inherit;
+
+      text-align: center;
+    }
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300vh);
+    opacity: 0;
+  }
+}
