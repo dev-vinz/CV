@@ -6,14 +6,18 @@
   border-radius: 10px;
 
   .vj-icon {
+    display: grid;
+
+    place-items: center;
+
     width: 100%;
+    height: 150px;
 
     margin-bottom: 1rem;
 
-    text-align: center;
-
     img {
       width: 50%;
+      max-height: 100%;
     }
   }
 
@@ -27,6 +31,13 @@
   }
 
   .vj-description {
+    display: -webkit-box;
+
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    height: 7rem;
+
     margin-bottom: 1.5rem;
 
     color: rgba(var(--vj-color-rgb), 0.8);
@@ -34,7 +45,12 @@
     font-size: 0.9rem;
     font-weight: 300;
 
+    line-clamp: 5;
+
     text-align: center;
+    text-overflow: ellipsis;
+
+    overflow: hidden;
   }
 
   .vj-buttons {
