@@ -1,13 +1,27 @@
 <div class="vj-container vj-py">
-  <h2 class="vj-title">
+  <h2
+    class="vj-title"
+    pAnimateOnScroll
+    enterClass="animate__animated animate__fadeInDown"
+  >
     {{ "c.title" | transloco }}
   </h2>
 
-  <p class="vj-description">
+  <p
+    class="vj-description"
+    pAnimateOnScroll
+    enterClass="animate__animated animate__fadeInDown"
+  >
     {{ "c.description" | transloco }}
   </p>
 
-  <form class="vj-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form
+    class="vj-form"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    pAnimateOnScroll
+    enterClass="animate__animated animate__fadeInUp"
+  >
     <div
       *ngIf="isSent"
       class="alert alert-success alert-dismissible fade show"

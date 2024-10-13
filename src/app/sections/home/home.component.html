@@ -1,9 +1,15 @@
 <div class="vj-home">
   <div class="vj-content">
-    <div class="vj-container w-100 my-auto">
+    <div
+      class="vj-container w-100 my-auto"
+      pAnimateOnScroll
+      enterClass="animate__animated animate__fadeInDown"
+    >
       <div class="vj-intro">
         <h4>{{ "h.hello" | transloco }}</h4>
-        <h1>Vincent Jeannin</h1>
+        <h1 pAnimateOnScroll enterClass="animate__animated animate__fadeInLeft">
+          Vincent Jeannin
+        </h1>
         <ngx-typed-js
           [strings]="typedStrings"
           [typeSpeed]="75"
@@ -17,7 +23,11 @@
           </h3>
         </ngx-typed-js>
 
-        <div class="vj-socials">
+        <div
+          class="vj-socials"
+          pAnimateOnScroll
+          enterClass="animate__animated animate__fadeInRight"
+        >
           <app-social
             faIcon="faBrandLinkedinIn"
             url="https://www.linkedin.com/in/vincentjeannin"
@@ -35,7 +45,11 @@
             url="https://www.discord.com/users/314808292876484608"
           ></app-social>
         </div>
-        <div class="vj-buttons">
+        <div
+          class="vj-buttons"
+          pAnimateOnScroll
+          enterClass="animate__animated animate__fadeInUp"
+        >
           <button class="vj-btn vj-btn-primary" (click)="scrollToAbout()">
             {{ "h.discover-more" | transloco }}
           </button>

@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   public ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
     const favIcon = document.querySelector('#favicon');
 

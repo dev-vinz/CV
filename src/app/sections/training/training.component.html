@@ -1,10 +1,18 @@
 <div class="vj-training vj-py">
   <div class="vj-container">
-    <h2 class="vj-title">
+    <h2
+      class="vj-title"
+      pAnimateOnScroll
+      enterClass="animate__animated animate__fadeInDown"
+    >
       {{ "t.title" | transloco }}
     </h2>
 
-    <div class="vj-timeline-box">
+    <div
+      class="vj-timeline-box"
+      pAnimateOnScroll
+      enterClass="animate__animated animate__fadeInUp"
+    >
       <app-timeline-card
         degree="{{ 't.mse.degree' | transloco }}"
         description="{{ 't.mse.description' | transloco }}"

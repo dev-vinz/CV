@@ -1,7 +1,11 @@
 <div class="vj-about vj-py">
   <div class="vj-container">
     <div class="row gap-3">
-      <div class="col-md-6">
+      <div
+        class="col-md-6"
+        pAnimateOnScroll
+        enterClass="animate__animated animate__fadeInLeft"
+      >
         <div class="vj-img-box">
           <div class="vj-main">
             <img src="images/motos.webp" alt="3 motos" />
@@ -13,13 +17,26 @@
       </div>
       <div class="col mb-3">
         <div class="vj-about">
-          <h2 class="vj-title">
+          <h2
+            class="vj-title"
+            pAnimateOnScroll
+            enterClass="animate__animated animate__fadeInDown"
+          >
             {{ "a.title" | transloco }}
           </h2>
-          <p class="vj-description">
+          <p
+            class="vj-description"
+            pAnimateOnScroll
+            enterClass="animate__animated animate__fadeInUp"
+          >
             {{ "a.description" | transloco }}
           </p>
-          <button class="vj-btn" (click)="toggleMore()">
+          <button
+            class="vj-btn"
+            pAnimateOnScroll
+            enterClass="animate__animated animate__fadeInUp"
+            (click)="toggleMore()"
+          >
             {{ "a.read-more" | transloco }}
           </button>
         </div>
