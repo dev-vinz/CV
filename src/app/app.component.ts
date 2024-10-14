@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { environment } from './environments/environment';
-
-import moment from 'moment';
-import 'moment-timezone';
+import { CoreService } from './services/core.service';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +17,8 @@ export class AppComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  constructor(private readonly _coreService: CoreService) {}
 
   public ngOnInit(): void {
     window.scrollTo(0, 0);
@@ -42,12 +41,19 @@ export class AppComponent implements OnInit {
   \* * * * * * * * * * * * * * * */
 
   public get isBirthday(): boolean {
-    const birthday = environment.birthdayDate;
-    const today = moment().tz('Europe/Zurich');
+    const birthday = this._coreService.birthdayDate;
+    const today = this._coreService.today;
 
     return (
       today.date() === birthday.date() && today.month() === birthday.month()
     );
+  }
+
+  public get isNewYear(): boolean {
+    const newYear = this._coreService.newYearDate;
+    const today = this._coreService.today;
+
+    return today.isSame(newYear, 'day');
   }
 
   public get mobileMenuOpened(): boolean {

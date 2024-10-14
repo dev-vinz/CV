@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { provideTranslocoScope } from '@jsverse/transloco';
 
-import { environment } from '../../environments/environment';
-
-import moment from 'moment';
-import 'moment-timezone';
+import { CoreService } from '../../services/core.service';
 
 @Component({
   selector: 'app-about',
@@ -20,6 +17,12 @@ export class AboutComponent {
   private _isCollapsed: boolean = true;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+  |*                        CONSTRUCTORS                         *|
+  \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  constructor(private readonly _coreService: CoreService) {}
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                           PUBLIC                            *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -32,17 +35,17 @@ export class AboutComponent {
   \* * * * * * * * * * * * * * * */
 
   public get birthdayDate(): string {
-    return environment.birthdayDate.format('DD.MM.YYYY');
+    return this._coreService.birthdayDate.format('DD.MM.YYYY');
   }
 
   public get currentAge(): number {
-    const now = moment().tz('Europe/Zurich');
-    return now.diff(environment.birthdayDate, 'years');
+    const now = this._coreService.today;
+    return now.diff(this._coreService.birthdayDate, 'years');
   }
 
   public get isBirthday(): boolean {
-    const birthday = environment.birthdayDate;
-    const today = moment().tz('Europe/Zurich');
+    const birthday = this._coreService.birthdayDate;
+    const today = this._coreService.today;
 
     return (
       today.date() === birthday.date() && today.month() === birthday.month()
