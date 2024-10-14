@@ -44,6 +44,7 @@ import { TranslocoRootModule } from './transloco-root.module';
 
 import { BirthdayBallonsComponent } from './animations/birthday-ballons/birthday-ballons.component';
 import { FireworksComponent } from './animations/fireworks/fireworks.component';
+import { SnowflakesComponent } from './animations/snowflakes/snowflakes.component';
 
 import { AboutComponent } from './sections/about/about.component';
 import { ContactComponent } from './sections/contact/contact.component';
@@ -65,6 +66,7 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
     AppComponent,
     BirthdayBallonsComponent,
     ContactComponent,
+    FireworksComponent,
     FooterComponent,
     HomeComponent,
     LangSelectorComponent,
@@ -72,10 +74,10 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
     ProjectCardComponent,
     ProjectModalComponent,
     ProjectsComponent,
+    SnowflakesComponent,
     SocialComponent,
     TimelineCardComponent,
     TrainingComponent,
-    FireworksComponent,
   ],
   imports: [
     AnimateOnScrollModule,

@@ -49,6 +49,15 @@ export class AppComponent implements OnInit {
     );
   }
 
+  public get isChristmas(): boolean {
+    const christmasStart = this._coreService.christmasStartDate;
+    const christmasEnd = this._coreService.christmasEndDate;
+
+    const today = this._coreService.today;
+
+    return today.isBetween(christmasStart, christmasEnd, 'day', '[]');
+  }
+
   public get isNewYear(): boolean {
     const newYear = this._coreService.newYearDate;
     const today = this._coreService.today;

@@ -1,30 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-birthday-ballons',
-  templateUrl: './birthday-ballons.component.html',
-  styleUrl: './birthday-ballons.component.scss',
+  selector: 'app-snowflakes',
+  templateUrl: './snowflakes.component.html',
+  styleUrl: './snowflakes.component.scss',
 })
-export class BirthdayBallonsComponent implements OnInit {
+export class SnowflakesComponent implements OnInit {
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          CONSTANTS                          *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private readonly NB_BALLOONS: number = 30;
+  private readonly NB_SNOWFLAKES: number = 200;
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                          PROPERTIES                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  private readonly _ballons: string[] = [];
+  private readonly _snowflakes: string[] = [];
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   public ngOnInit(): void {
-    for (let i = 0; i < this.NB_BALLOONS; i++) {
-      this._ballons.push(this._randomStyle);
+    for (let i = 0; i < this.NB_SNOWFLAKES; i++) {
+      this._snowflakes.push(this._randomStyle);
     }
   }
 
@@ -36,8 +36,8 @@ export class BirthdayBallonsComponent implements OnInit {
   |*           GETTERS           *|
   \* * * * * * * * * * * * * * * */
 
-  public get balloons(): string[] {
-    return this._ballons;
+  public get snowflakes(): string[] {
+    return this._snowflakes;
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -45,7 +45,7 @@ export class BirthdayBallonsComponent implements OnInit {
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   private _generateRandom(max: number): number {
-    return Math.floor(Math.random() * max);
+    return Math.random() * max;
   }
 
   /* * * * * * * * * * * * * * * *\
@@ -53,19 +53,23 @@ export class BirthdayBallonsComponent implements OnInit {
   \* * * * * * * * * * * * * * * */
 
   private get _randomStyle(): string {
-    const r = this._generateRandom(255);
-    const g = this._generateRandom(255);
-    const b = this._generateRandom(255);
-    const mt = this._generateRandom(200);
-    const ml = this._generateRandom(50);
-    const dur = this._generateRandom(5) + 5;
+    const left = this._generateRandom(100);
+    const size = this._generateRandom(10) + 5;
+    const duration = this._generateRandom(5) + 5;
+    const delay = this._generateRandom(5);
+    const opacity = this._generateRandom(0.5) + 0.5;
+
+    const randomX = this._generateRandom(1);
 
     return `
-      background-color: rgba(${r},${g},${b},0.7);
-      color: rgba(${r},${g},${b},0.7);
-      box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
-      margin: ${mt}px 0 0 ${ml}px;
-      --vj-duration: ${dur}s;
+      left: ${left}%;
+      width: ${size}px;
+      height: ${size}px;
+      animation-delay: ${delay}s;
+      animation-duration: ${duration}s;
+      opacity: ${opacity};
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, ${opacity * 0.7});
+      --vj-random-x: ${randomX};
     `;
   }
 }

@@ -35,8 +35,12 @@ export class CoreService {
     return environment.birthdayDate.tz(this._timezone).startOf('day');
   }
 
-  public get christmasDate(): moment.Moment {
-    return environment.christmasDate.tz(this._timezone).startOf('day');
+  public get christmasEndDate(): moment.Moment {
+    return environment.christmasEndDate.tz(this._timezone).startOf('day');
+  }
+
+  public get christmasStartDate(): moment.Moment {
+    return environment.christmasStartDate.tz(this._timezone).startOf('day');
   }
 
   public get newYearDate(): moment.Moment {
