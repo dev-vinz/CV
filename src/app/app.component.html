@@ -35,6 +35,9 @@
   [class.vj-mobile-menu-opened]="mobileMenuOpened"
 ></app-footer>
 
+<!-- TOOL COMPONENTS -->
+<app-cookies *ngIf="!isCookiesAccepted"></app-cookies>
+
 <!-- ANIMATION COMPONENTS -->
 <app-birthday-ballons *ngIf="isBirthday"></app-birthday-ballons>
 <app-fireworks *ngIf="isNewYear"></app-fireworks>

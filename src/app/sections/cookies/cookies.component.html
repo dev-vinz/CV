@@ -1,0 +1,17 @@
+<div
+  class="vj-cookies animate__animated animate__fadeInUp"
+  [class.animate__fadeOutDown]="isAccepted"
+>
+  <div class="vj-content">
+    <div class="vj-header">
+      <img src="images/cookie.webp" alt="Cookie" />
+      <h5>{{ "co.title" | transloco }}</h5>
+    </div>
+    <div class="vj-body mb-3 mb-sm-0">
+      {{ "co.body" | transloco }}
+    </div>
+    <button class="vj-btn ms-auto" (click)="acceptCookies()">
+      {{ "co.agree" | transloco }}
+    </button>
+  </div>
+</div>

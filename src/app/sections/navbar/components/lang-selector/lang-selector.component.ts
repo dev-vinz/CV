@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 
+import { CoreService } from '../../../../services/core.service';
+
 type Language = {
   code: string;
   name: string;
@@ -26,10 +28,13 @@ export class LangSelectorComponent implements OnInit {
   |*                        CONSTRUCTORS                         *|
   \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  constructor(private readonly _translocoService: TranslocoService) {}
+  constructor(
+    private readonly _coreService: CoreService,
+    private readonly _translocoService: TranslocoService
+  ) {}
 
   public ngOnInit(): void {
-    // TODO: Check browser lang and/or session preferences
+    this._translocoService.setActiveLang(this._coreService.preferredLanguage);
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -41,6 +46,7 @@ export class LangSelectorComponent implements OnInit {
   }
 
   public changeLang(lang: string): void {
+    this._coreService.preferredLanguage = lang;
     this._translocoService.setActiveLang(lang);
   }
 

@@ -23,13 +23,7 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     window.scrollTo(0, 0);
 
-    const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
-    const favIcon = document.querySelector('#favicon');
-
-    favIcon?.setAttribute(
-      'href',
-      deviceMode.matches ? 'darkicon.ico' : 'lighticon.ico'
-    );
+    this._changeFavicon();
   }
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -47,6 +41,10 @@ export class AppComponent implements OnInit {
     return (
       today.date() === birthday.date() && today.month() === birthday.month()
     );
+  }
+
+  public get isCookiesAccepted(): boolean {
+    return this._coreService.isCookiesAccepted;
   }
 
   public get isChristmas(): boolean {
@@ -75,5 +73,26 @@ export class AppComponent implements OnInit {
 
   public set mobileMenuOpened(mobileMenuOpened: boolean) {
     this._mobileMenuOpened = mobileMenuOpened;
+  }
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
+  |*                          LISTENERS                          *|
+  \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  private _changeFavicon(): void {
+    const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
+    const favIcon = document.querySelector('#favicon');
+
+    favIcon?.setAttribute(
+      'href',
+      deviceMode.matches ? 'darkicon.ico' : 'lighticon.ico'
+    );
+
+    deviceMode.addEventListener('change', (e) => {
+      favIcon?.setAttribute(
+        'href',
+        e.matches ? 'darkicon.ico' : 'lighticon.ico'
+      );
+    });
   }
 }

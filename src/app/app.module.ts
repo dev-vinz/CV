@@ -48,6 +48,7 @@ import { SnowflakesComponent } from './animations/snowflakes/snowflakes.componen
 
 import { AboutComponent } from './sections/about/about.component';
 import { ContactComponent } from './sections/contact/contact.component';
+import { CookiesComponent } from './sections/cookies/cookies.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { HomeComponent } from './sections/home/home.component';
 import { NavbarComponent } from './sections/navbar/navbar.component';
@@ -66,6 +67,7 @@ import { TimelineCardComponent } from './sections/training/components/timeline-c
     AppComponent,
     BirthdayBallonsComponent,
     ContactComponent,
+    CookiesComponent,
     FireworksComponent,
     FooterComponent,
     HomeComponent,

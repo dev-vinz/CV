@@ -1,0 +1,58 @@
+.vj-cookies {
+  position: fixed;
+
+  bottom: 1rem;
+  right: 1rem;
+
+  @media screen and (max-width: 575px) {
+    bottom: 0;
+    right: 0;
+
+    max-width: 100%;
+  }
+
+  .vj-content {
+    display: grid;
+
+    max-width: 30rem;
+
+    padding: 1rem;
+
+    color: rgba(var(--vj-color-rgb), 0.8);
+    background-color: var(--vj-body-bg);
+
+    border: 1px solid rgba(var(--vj-color-rgb), 0.1);
+    border-radius: 10px;
+
+    .vj-header {
+      display: flex;
+
+      align-items: center;
+      gap: 0.5rem;
+
+      margin-bottom: 1rem;
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      h5 {
+        margin: 0;
+
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+
+    .vj-body {
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+
+    .vj-btn {
+      padding: 0.25rem 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+}
