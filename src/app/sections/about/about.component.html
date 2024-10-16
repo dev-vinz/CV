@@ -37,7 +37,7 @@
             enterClass="animate__animated animate__fadeInUp"
             (click)="toggleMore()"
           >
-            {{ "a.read-more" | transloco }}
+            {{ (isCollapsed ? "a.read-more" : "a.read-less") | transloco }}
           </button>
         </div>
       </div>
@@ -129,7 +129,7 @@
           </div>
           <div class="col col-12 col-sm-6 col-lg-4 mb-3">
             <ng-icon name="faSolidLaptopCode" size="1.5rem"></ng-icon>
-            {{ "a.hobbies.code" | transloco }}
+            {{ "a.hobbies.coding" | transloco }}
           </div>
         </div>
       </div>
