@@ -1,1 +1,22 @@
-{}
+{
+  "github": "GitHub",
+  "read-more": "Read more",
+  "restaurant-gare": {
+    "description": "The managers of the restaurant of the Gare de Corcelles-Peseux wanted a website to present their establishment, as well as their menu, the menu of the week and the suggestions of the moment. They also wanted to be able to update their menu of the week and the suggestions independently, without having to go through an intermediary.",
+    "specs": "The project consists of two web applications. The first is the public website, made with Angular. The second is a simple PHP application, allowing to update the menu of the week and the suggestions of the moment. This PHP application also serves as a \"mini API\", because it is called by the first Angular application, in order to retrieve the suggestions of the moment to display.",
+    "title": "Restaurant de la Gare"
+  },
+  "squadbustersfr": {
+    "description": "For the release of the mobile game SquadBusters, made by Supercell, a creator contacted me to create a website listing a wiki on the game, as well as articles published regularly by content creators.",
+    "specs": "The project consists of a WebApi in .NET 8.0, combined with a SQL Server database. There are two client applications, each made with Angular: an \"admin\" part, secure, to be able to dynamically add data and a \"public\" part, for users. In order to link the two clients with the API, and to avoid code duplication, an NPM library is shared between the two applications.",
+    "title": "SquadBusters FR"
+  },
+  "tech-specs": "Technical specifications",
+  "title": "Projects",
+  "univers-mode": {
+    "description": "** In progress ** For the creation of her online store Univers Mode, my sister asked my dad and me to create her website. She wanted a simple, uncluttered site that was easy to update. She also wanted to be able to manage the products, stocks, orders, customers, etc. herself.",
+    "specs": "The project consists of a single web application, made with Laravel. This application is composed of several parts: a \"public\" part, for customers, and an \"admin\" part, for administrators. The \"admin\" part is secure, and allows you to manage products, stocks, orders, customers, etc. The \"public\" part allows customers to view products, add them to the cart, place orders, etc.",
+    "title": "Univers Mode"
+  },
+  "website": "Website"
+}

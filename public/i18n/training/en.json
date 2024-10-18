@@ -1,1 +1,23 @@
-{}
+{
+  "ddr": {
+    "degree": "High School",
+    "description": "Physics and Mathematics Applications section, at Denis-de-Rougemont high school",
+    "location": "Neuchâtel, Switzerland"
+  },
+  "epfl": {
+    "degree": "Bachelor EPF",
+    "description": "First years of microtech and computer science bachelor at EPFL",
+    "location": "Lausanne, Switzerland"
+  },
+  "he-arc": {
+    "degree": "Bachelor HES",
+    "description": "Computer science bachelor, in software engineering at HE-ARC",
+    "location": "Neuchâtel, Switzerland"
+  },
+  "mse": {
+    "degree": "Master MSE",
+    "description": "Computer science master, in software engineering at HES-SO",
+    "location": "Lausanne, Switzerland"
+  },
+  "title": "Trainings"
+}

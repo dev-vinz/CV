@@ -1,1 +1,17 @@
-{}
+{
+  "description": "You can contact me by filling out the form below.",
+  "email": "Email",
+  "email-invalid": "The email address is not valid.",
+  "email-required": "The email address is required.",
+  "error": "The form contains errors. Please correct them before submitting the form again.",
+  "first-name": "First name",
+  "first-name-required": "The first name is required.",
+  "last-name": "Last name",
+  "last-name-required": "The last name is required.",
+  "message": "Message",
+  "message-required": "The message is required.",
+  "message-sent": "Your message has been sent successfully, I will reply as soon as possible.",
+  "phone": "Phone",
+  "send-message": "Send message",
+  "title": "Contact form"
+}

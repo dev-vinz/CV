@@ -1,1 +1,30 @@
-{}
+{
+  "description": "I've been fascinated by computers and programming since I was 13, and started learning JavaScript on my own. Later, when I was at secondary school, I chose the complementary option of Computer Science, and from that moment on it never left me.",
+  "hobbies": {
+    "bloc-climbing": "Boulder climbing",
+    "coding": "Coding",
+    "motorcycle-riding": "Riding a motorcycle",
+    "play-piano": "Playing the piano",
+    "snowboarding": "Snowboarding",
+    "swimming": "Swimming",
+    "title": "My hobbies"
+  },
+  "informations": {
+    "licenses": "Driving licenses A and B",
+    "old": "years old",
+    "swiss-nationality": "Swiss nationality",
+    "title": "Informations"
+  },
+  "personality": {
+    "ambitious": "Ambitious",
+    "creative": "Creative",
+    "curious": "Curious",
+    "discret": "Discret",
+    "open-minded": "Open-minded",
+    "team-player": "Team player",
+    "title": "Personality"
+  },
+  "read-less": "Read less",
+  "read-more": "Read more",
+  "title": "About me"
+}
