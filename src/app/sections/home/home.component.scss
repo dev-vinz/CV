@@ -46,6 +46,14 @@
 
         margin-bottom: 1.5rem;
       }
+
+      .vj-buttons {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 0.5rem;
+      }
     }
   }
 }
