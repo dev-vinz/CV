@@ -2,20 +2,20 @@
   "github": "GitHub",
   "read-more": "Lire plus",
   "restaurant-gare": {
-    "description": "Les gérants du restaurant de la gare de Corcelles-Peseux ont désiré un site web pour présenter leur établissement, ainsi que leur carte, le menu de la semaine et les suggestions du moment. Ils ont également souhaité pouvoir mettre à jour leur menu de la semaine et les suggestions de manière autonome, sans devoir passer par un intermédiaire.",
-    "specs": "Le projet est composé de deux applications web. La première est le site web public, réalisé avec Angular. La seconde est une simple application PHP, permettant de mettre à jour le menu de la semaine et les suggestions du moment. Cette application PHP sert également de \"mini API\", car elle est appelée par la première application Angular, afin de récupérer les suggestions du moment à afficher.",
+    "description": "Les gérants du restaurant de la gare de Corcelles-Peseux ont souhaité un site web pour présenter leur établissement, leur carte, le menu de la semaine et les suggestions du moment. Ils voulaient également pouvoir mettre à jour le menu de la semaine et les suggestions de manière autonome, sans passer par un intermédiaire.",
+    "specs": "Le projet comprend deux applications web. La première est un site public développé avec Angular. La seconde est une petite application PHP, qui permet de mettre à jour le menu de la semaine et les suggestions du moment. Cette application PHP fait aussi office de « mini API », utilisée par l'application Angular pour récupérer les suggestions à afficher.",
     "title": "Restaurant de la Gare"
   },
   "squadbustersfr": {
-    "description": "Pour la sortie du jeu mobile SquadBusters, réalisé par Supercell, un créateur m'a contacté afin de réaliser un site web recensant un wiki sur le jeu, ainsi que des articles publiés régulièrement par les créateurs de contenu.",
-    "specs": "Le projet se compose d'une WebApi en .NET 8.0, assortie d'une base de données SQL Server. Il existe deux applications clientes, chacune réalisée avec Angular: une partie \"admin\", sécurisée, pour pouvoir ajouter dynamiquement des données et une partie \"publique\", pour les utilisateurs. Afin de lier les deux clients avec l'API, et pour éviter le duplicata de code, une librairie NPM est partagée entre les deux applications.",
+    "description": "Pour la sortie du jeu mobile SquadBusters, réalisé par Supercell, un créateur a demandé la réalisation d'un site web recensant un wiki sur le jeu, ainsi que des articles publiés régulièrement par des créateurs de contenu.",
+    "specs": "Le projet repose sur une WebApi en .NET 8.0, couplée à une base de données SQL Server. Il inclut deux applications clientes, toutes deux développées avec Angular : une partie « admin » sécurisée, permettant d'ajouter des données dynamiques, et une partie « publique » à destination des utilisateurs. Pour lier les deux clients à l'API et éviter la duplication de code, une bibliothèque NPM est partagée entre les deux applications.",
     "title": "SquadBusters FR"
   },
   "tech-specs": "Spécifications techniques",
   "title": "Projets",
   "univers-mode": {
-    "description": "** En cours de réalisation ** Pour la création de sa boutique en ligne Univers Mode, ma sœur nous a demandé, à mon papa et moi, de réaliser son site web. Elle souhaitait un site simple, épuré, et facile à mettre à jour. Elle souhaitait également pouvoir gérer elle-même les produits, les stocks, les commandes, les clients, etc.",
-    "specs": "Le projet est constitué d'une seule application web, réalisée avec Laravel. Cette application est composée de plusieurs parties: une partie \"publique\", pour les clients, et une partie \"admin\", pour les administrateurs. La partie \"admin\" est sécurisée, et permet de gérer les produits, les stocks, les commandes, les clients, etc. La partie \"publique\" permet aux clients de consulter les produits, de les ajouter au panier, de passer commande, etc.",
+    "description": "** En cours de réalisation ** Pour la création de la boutique en ligne Univers Mode, une demande a été faite pour la conception d'un site web simple, épuré et facile à mettre à jour. Il était également souhaité que la gestion des produits, des stocks, des commandes et des clients puisse être effectuée de manière autonome.",
+    "specs": "Le projet comprend une application web unique, développée avec Laravel. Cette application est divisée en plusieurs sections : une partie « publique » pour les clients et une partie « admin » pour les administrateurs. La partie « admin » est sécurisée et permet de gérer les produits, les stocks, les commandes et les clients, tandis que la partie « publique » permet aux clients de consulter les produits, de les ajouter au panier et de passer commande.",
     "title": "Univers Mode"
   },
   "website": "Site Web"
