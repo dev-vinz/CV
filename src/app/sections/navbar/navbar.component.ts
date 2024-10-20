@@ -58,6 +58,10 @@ export class NavbarComponent implements AfterContentInit {
 
   public scrollTo(fragment: string): void {
     this._scrollSpy.scrollTo(fragment);
+
+    if (this._isMenuOpen) {
+      this.toggleMenu();
+    }
   }
 
   public toggleMenu(): void {
